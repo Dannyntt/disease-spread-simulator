@@ -1,0 +1,193 @@
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+#include <string>
+#include <vector>
+#include <map>
+#include <algorithm>
+#include <chrono>
+
+#include "graph.h"
+#include "model.h"
+#include "data_upd.h"
+
+void imprimirSeparador(char c = '=', int n = 60) {
+    std::cout << std::string(n, c) << "\n";
+}
+
+void imprimirMetricas(const Grafo& G, const std::string& nombre) {
+    imprimirSeparador('-');
+    std::cout << " Metricas: " << nombre << "\n";
+    imprimirSeparador('-');
+
+    auto grados = G.grados();
+    int maxGrado = 0, minGrado = INT_MAX, totalGrado = 0;
+    for (auto& [_, d] : grados) {
+        maxGrado   = std::max(maxGrado, d);
+        minGrado   = std::min(minGrado, d);
+        totalGrado += d;
+    }
+    double promGrado = G.numNodos() > 0
+                       ? (double)totalGrado / G.numNodos() : 0;
+
+    auto comps = G.componentesConexas();
+    size_t maxComp = 0;
+    for (auto& c : comps)
+        maxComp = std::max(maxComp, c.size());
+
+    double densidad = 0;
+    if (G.numNodos() > 1) {
+        long long maxAristas = (long long)G.numNodos() * (G.numNodos() - 1) / 2;
+        densidad = (double)G.numAristas() / maxAristas;
+    }
+
+    std::cout << std::fixed << std::setprecision(4);
+    std::cout << "  Nodos           : " << G.numNodos()   << "\n";
+    std::cout << "  Aristas         : " << G.numAristas() << "\n";
+    std::cout << "  Densidad        : " << densidad       << "\n";
+    std::cout << "  Grado promedio  : " << promGrado      << "\n";
+    std::cout << "  Grado maximo    : " << maxGrado       << "\n";
+    std::cout << "  Grado minimo    : " << minGrado       << "\n";
+    std::cout << "  Componentes     : " << comps.size()   << "\n";
+    std::cout << "  Comp. gigante   : " << maxComp        << " nodos\n";
+
+    auto degCent = G.centralidadGrado();
+    auto top5 = G.topKNodos(5, [&](int id) {
+        return degCent.count(id) ? degCent.at(id) : 0.0;
+    });
+    std::cout << "  Top 5 hubs (ID) : ";
+    for (int id : top5) std::cout << id << " ";
+    std::cout << "\n";
+
+    // Estado inicial SIR
+    auto cnt = G.contarEstados();
+    std::cout << "  Estado SIR ini  : S=" << cnt.S
+              << "  I=" << cnt.I
+              << "  R=" << cnt.R << "\n";
+    imprimirSeparador('-');
+    std::cout << "\n";
+}
+
+void guardarHistoria(const std::vector<PuntoSIR>& historia,
+                     const std::string& estrategia,
+                     const std::string& outDir) {
+    std::string path = outDir + "/sir_" + estrategia + ".csv";
+    std::ofstream f(path);
+    f << "tick,S,I,R\n";
+    for (auto& p : historia)
+        f << p.tick << "," << p.S << "," << p.I << "," << p.R << "\n";
+}
+
+void imprimirResumen(const std::map<std::string,
+                     std::vector<PuntoSIR>>& resultados) {
+    imprimirSeparador();
+    std::cout << "  RESUMEN COMPARATIVO DE ESTRATEGIAS\n";
+    imprimirSeparador();
+
+    std::cout << std::left
+              << std::setw(22) << "Estrategia"
+              << std::setw(12) << "Pico I"
+              << std::setw(12) << "Dia pico"
+              << std::setw(14) << "Total R (fin)"
+              << "Reduccion pico\n";
+    imprimirSeparador('-');
+
+    int picoBaseline = 0;
+    if (resultados.count("ninguna")) {
+        for (auto& p : resultados.at("ninguna"))
+            picoBaseline = std::max(picoBaseline, p.I);
+    }
+
+    for (auto& [estrategia, historia] : resultados) {
+        int pico = 0, diaPico = 0, totalR = 0;
+        for (auto& p : historia) {
+            if (p.I > pico) { pico = p.I; diaPico = p.tick; }
+            totalR = p.R;
+        }
+        double reduccion = picoBaseline > 0
+                           ? 100.0 * (picoBaseline - pico) / picoBaseline : 0;
+
+        std::cout << std::left
+                  << std::setw(22) << estrategia
+                  << std::setw(12) << pico
+                  << std::setw(12) << diaPico
+                  << std::setw(14) << totalR
+                  << std::fixed << std::setprecision(1)
+                  << reduccion << "%\n";
+    }
+    imprimirSeparador();
+}
+
+
+int main(int argc, char* argv[]) {
+    std::string dataDir = (argc > 1) ? argv[1] : ".";
+    std::string outDir  = (argc > 2) ? argv[2] : "./resultados";
+    std::string mkdirCmd = "mkdir -p " + outDir;
+    std::system(mkdirCmd.c_str());
+
+    imprimirSeparador();
+    std::cout << "  SIMULADOR SIR — COVID-19 COLOMBIA\n";
+    std::cout << "  Estructuras de Datos y Algoritmos\n";
+    imprimirSeparador();
+    std::cout << "\n";
+
+    auto t0 = std::chrono::high_resolution_clock::now();
+
+    std::cout << "[1/4] Cargando datos...\n";
+    Grafo G = CargaDatos::cargarGrafoMicro(dataDir + "/Casos1.csv");
+    auto params = CargaDatos::calibrarParametros(
+                      dataDir + "/covid-19-colombia.csv");
+    std::cout << "\n";
+
+    
+    std::cout << "[2/4] Analizando grafo...\n";
+    imprimirMetricas(G, "Grafo de Contagio (Casos individuales)");
+
+    G.exportarNodos(outDir + "/grafo_nodos.csv");
+    G.exportarAristas(outDir + "/grafo_aristas.csv");
+    std::cout << "  [OK] Grafo exportado a " << outDir << "/\n\n";
+
+    std::cout << "[3/4] Simulando estrategias de contencion...\n";
+
+    SimuladorSIR sim(params.beta, params.gamma, /*seed=*/42);
+    const int PASOS = 60;
+
+    struct EstrategiaFn {
+        std::string clave;
+        std::function<Grafo(const Grafo&)> fn;
+    };
+
+    std::vector<EstrategiaFn> estrategias = {
+        {"ninguna",     [](const Grafo& g){ return Estrategias::ninguna(g); }},
+        {"hubs",        [](const Grafo& g){ return Estrategias::aislarHubs(g, 0.05); }},
+        {"rastreo_bfs", [](const Grafo& g){ return Estrategias::rastreaContacnosBFS(g); }},
+        {"vacunacion",  [](const Grafo& g){ return Estrategias::vacunacionDirigida(g, 0.10); }},
+    };
+
+    std::map<std::string, std::vector<PuntoSIR>> resultados;
+
+    for (auto& e : estrategias) {
+        std::cout << "\n  Estrategia: "
+                  << Estrategias::nombre(e.clave) << "\n";
+
+      
+        Grafo G_mod = e.fn(G);
+
+        
+        auto historia = sim.simular(G_mod, PASOS);
+        guardarHistoria(historia, e.clave, outDir);
+        resultados[e.clave] = historia;
+    }
+
+    std::cout << "\n[4/4] Resultados\n";
+    imprimirResumen(resultados);
+
+    auto t1 = std::chrono::high_resolution_clock::now();
+    double secs = std::chrono::duration<double>(t1 - t0).count();
+    std::cout << "\n  Tiempo total: " << std::fixed
+              << std::setprecision(2) << secs << " s\n";
+    std::cout << "  Resultados guardados en: " << outDir << "/\n";
+    imprimirSeparador();
+
+    return 0;
+}
