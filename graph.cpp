@@ -3,6 +3,15 @@
 #include <iostream>
 #include <numeric>
 #include <stack>
+#include "data_upd.h"
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <unordered_map>
+#include <climits>
 
 const std::vector<Arista> Grafo::EMPTY_VEC = {};
 

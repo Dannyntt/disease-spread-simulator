@@ -11,6 +11,11 @@
 #include "model.h"
 #include "data_upd.h"
 
+namespace CargaDatos {
+    Grafo cargarGrafoMicro(const std::string& pathCasos);
+    ParametrosSIR calibrarParametros(const std::string& pathNacional);
+}
+
 void imprimirSeparador(char c = '=', int n = 60) {
     std::cout << std::string(n, c) << "\n";
 }
