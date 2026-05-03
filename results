@@ -7,13 +7,11 @@ import matplotlib.patches as mpatches
 import matplotlib.gridspec as gridspec
 import networkx as nx
 
-# ============================================================
-# CONFIGURACIÓN GENERAL
-# ============================================================
+
 
 OUT = sys.argv[1] if len(sys.argv) > 1 else "./resultados"
 
-# Paleta visual más limpia y moderna
+
 COLORES = {
     "S": "#2563eb",          # azul
     "I": "#dc2626",          # rojo
@@ -71,9 +69,6 @@ plt.rcParams.update({
 })
 
 
-# ============================================================
-# UTILIDADES
-# ============================================================
 
 def cargar(nombre):
     path = os.path.join(OUT, nombre)
@@ -119,10 +114,6 @@ def validar_datos_minimos():
     return True
 
 
-# ============================================================
-# CARGA DE DATOS
-# ============================================================
-
 historias = {k: cargar(f"sir_{k}.csv") for k in ESTRATEGIAS}
 
 nodos         = cargar("grafo_nodos.csv")
@@ -141,9 +132,6 @@ n_aristas = len(aristas) if aristas is not None else 0
 print(f"  OK — {len(historias)} estrategias | {n_nodos} nodos | {n_aristas} aristas\n")
 
 
-# ============================================================
-# FIGURA 1: CURVAS SIR POR ESTRATEGIA
-# ============================================================
 
 def fig1_curvas_sir():
     fig, axes = plt.subplots(2, 2, figsize=(15, 9))
@@ -216,10 +204,6 @@ def fig1_curvas_sir():
     plt.tight_layout()
     guardar(fig, "fig1_curvas_sir.png")
 
-
-# ============================================================
-# FIGURA 2: COMPARACIÓN DE ESTRATEGIAS
-# ============================================================
 
 def fig2_comparacion():
     fig, axes = plt.subplots(1, 3, figsize=(17, 6))
