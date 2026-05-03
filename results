@@ -1,4 +1,3 @@
-
 import sys
 import os
 import pandas as pd
@@ -8,50 +7,124 @@ import matplotlib.patches as mpatches
 import matplotlib.gridspec as gridspec
 import networkx as nx
 
+# ============================================================
+# CONFIGURACIÓN GENERAL
+# ============================================================
+
 OUT = sys.argv[1] if len(sys.argv) > 1 else "./resultados"
 
+# Paleta visual más limpia y moderna
 COLORES = {
-    "S":      "#3b82f6",
-    "I":      "#ef4444",
-    "R":      "#10b981",
-    "bg":     "#0f1117",
-    "panel":  "#1e2130",
-    "texto":  "#e2e8f0",
-    "grid":   "#2d3148",
-    "acento": "#a78bfa",
+    "S": "#2563eb",          # azul
+    "I": "#dc2626",          # rojo
+    "R": "#16a34a",          # verde
+
+    "bg": "#f8fafc",         # fondo general claro
+    "panel": "#ffffff",      # fondo de panel
+    "texto": "#111827",      # texto principal
+    "texto_suave": "#475569",
+    "grid": "#dbe3ef",
+    "borde": "#cbd5e1",
+
+    "acento": "#4f46e5",     # índigo
+    "acento2": "#0891b2",    # cyan
+    "warning": "#f59e0b",
+    "gris": "#64748b",
 }
 
 ESTRATEGIAS = {
-    "ninguna":     ("Sin intervención",   "#ef4444"),
-    "hubs":        ("Aislar hubs",        "#f59e0b"),
-    "rastreo_bfs": ("Rastreo BFS",        "#3b82f6"),
-    "vacunacion":  ("Vacunación dirigida","#10b981"),
+    "ninguna":     ("Sin intervención",    "#dc2626"),
+    "hubs":        ("Aislamiento de hubs", "#f59e0b"),
+    "rastreo_bfs": ("Rastreo BFS",         "#2563eb"),
+    "vacunacion":  ("Vacunación dirigida", "#16a34a"),
 }
 
 plt.rcParams.update({
-    "figure.facecolor":  COLORES["bg"],
-    "axes.facecolor":    COLORES["panel"],
-    "axes.edgecolor":    COLORES["grid"],
-    "axes.labelcolor":   COLORES["texto"],
-    "xtick.color":       COLORES["texto"],
-    "ytick.color":       COLORES["texto"],
-    "text.color":        COLORES["texto"],
-    "grid.color":        COLORES["grid"],
-    "grid.linestyle":    "--",
-    "grid.alpha":        0.4,
-    "legend.framealpha": 0.15,
-    "font.size":         9,
+    "figure.facecolor": COLORES["bg"],
+    "axes.facecolor": COLORES["panel"],
+    "savefig.facecolor": COLORES["bg"],
+
+    "axes.edgecolor": COLORES["borde"],
+    "axes.labelcolor": COLORES["texto"],
+    "axes.titleweight": "bold",
+    "axes.titlesize": 11,
+    "axes.labelsize": 10,
+
+    "xtick.color": COLORES["texto_suave"],
+    "ytick.color": COLORES["texto_suave"],
+    "text.color": COLORES["texto"],
+
+    "grid.color": COLORES["grid"],
+    "grid.linestyle": "-",
+    "grid.alpha": 0.65,
+
+    "legend.frameon": True,
+    "legend.framealpha": 0.95,
+    "legend.facecolor": "#ffffff",
+    "legend.edgecolor": COLORES["borde"],
+
+    "font.family": "DejaVu Sans",
+    "font.size": 9,
+
+    "lines.linewidth": 2.4,
+    "lines.markersize": 4,
 })
+
+
+# ============================================================
+# UTILIDADES
+# ============================================================
 
 def cargar(nombre):
     path = os.path.join(OUT, nombre)
+
     if not os.path.exists(path):
         print(f"  [ADVERTENCIA] No encontrado: {path}")
         return None
-    return pd.read_csv(path)
 
-print("Cargando CSVs generados por C++...")
-historias     = {k: cargar(f"sir_{k}.csv") for k in ESTRATEGIAS}
+    try:
+        return pd.read_csv(path)
+    except Exception as e:
+        print(f"  [ERROR] No se pudo leer {path}: {e}")
+        return None
+
+
+def limpiar_ejes(ax):
+    ax.grid(True, zorder=0)
+    ax.spines["top"].set_visible(False)
+    ax.spines["right"].set_visible(False)
+    ax.spines["left"].set_color(COLORES["borde"])
+    ax.spines["bottom"].set_color(COLORES["borde"])
+    ax.tick_params(axis="both", labelsize=9)
+
+
+def guardar(fig, nombre):
+    path = os.path.join(OUT, nombre)
+    fig.savefig(path, dpi=300, bbox_inches="tight", facecolor=COLORES["bg"])
+    plt.close(fig)
+    print(f"[✓] {nombre}")
+
+
+def validar_datos_minimos():
+    if not historias:
+        print("\n[ERROR] No se encontraron archivos SIR.")
+        print("Primero ejecuta el simulador C++ para generar los CSV en ./resultados/")
+        return False
+
+    if nodos is None or aristas is None:
+        print("\n[ERROR] Faltan archivos del grafo.")
+        print("Se esperaban grafo_nodos.csv y grafo_aristas.csv en ./resultados/")
+        return False
+
+    return True
+
+
+# ============================================================
+# CARGA DE DATOS
+# ============================================================
+
+historias = {k: cargar(f"sir_{k}.csv") for k in ESTRATEGIAS}
+
 nodos         = cargar("grafo_nodos.csv")
 aristas       = cargar("grafo_aristas.csv")
 grados_df     = cargar("grafo_grados.csv")
@@ -59,354 +132,737 @@ centralidades = cargar("grafo_centralidades.csv")
 componentes   = cargar("grafo_componentes.csv")
 
 historias = {k: v for k, v in historias.items() if v is not None}
-print(f"  OK — {len(historias)} estrategias | "
-      f"{len(nodos)} nodos | {len(aristas)} aristas\n")
+
+print("\nCargando CSVs generados por C++...")
+
+n_nodos = len(nodos) if nodos is not None else 0
+n_aristas = len(aristas) if aristas is not None else 0
+
+print(f"  OK — {len(historias)} estrategias | {n_nodos} nodos | {n_aristas} aristas\n")
+
+
+# ============================================================
+# FIGURA 1: CURVAS SIR POR ESTRATEGIA
+# ============================================================
 
 def fig1_curvas_sir():
-    fig, axes = plt.subplots(2, 2, figsize=(15, 9), facecolor=COLORES["bg"])
+    fig, axes = plt.subplots(2, 2, figsize=(15, 9))
     fig.suptitle(
-        "Curvas SIR por Estrategia de Contención\nCOVID-19 Colombia — Simulador C++",
-        fontsize=13, color=COLORES["texto"], fontweight="bold", y=1.01
+        "Dinámica SIR bajo estrategias de contención\nRed de contagio COVID-19 Colombia",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.02,
     )
-    for ax, (clave, (titulo, _)) in zip(axes.flat, ESTRATEGIAS.items()):
-        ax.set_facecolor(COLORES["panel"])
+
+    for ax, (clave, (titulo, color_estrategia)) in zip(axes.flat, ESTRATEGIAS.items()):
         if clave not in historias:
             ax.set_visible(False)
             continue
+
         df = historias[clave]
-        ax.plot(df["tick"], df["S"], color=COLORES["S"], lw=2.2, label="Susceptible")
-        ax.plot(df["tick"], df["I"], color=COLORES["I"], lw=2.2, label="Infectado")
-        ax.plot(df["tick"], df["R"], color=COLORES["R"], lw=2.2, label="Recuperado")
+        limpiar_ejes(ax)
+
+        ax.plot(df["tick"], df["S"], color=COLORES["S"], label="Susceptibles")
+        ax.plot(df["tick"], df["I"], color=COLORES["I"], label="Infectados")
+        ax.plot(df["tick"], df["R"], color=COLORES["R"], label="Recuperados")
+
         idx_pico = df["I"].idxmax()
-        pico_t, pico_v = df["tick"][idx_pico], df["I"][idx_pico]
-        ax.axvline(pico_t, color=COLORES["I"], alpha=0.25, lw=1.5, ls="--")
-        ax.annotate(f"Pico día {pico_t}\n{pico_v} nodos",
-                    xy=(pico_t, pico_v), xytext=(pico_t+4, pico_v*0.78),
-                    fontsize=7.5, color=COLORES["I"],
-                    arrowprops=dict(arrowstyle="->", color=COLORES["I"], lw=0.9))
-        ax.set_title(titulo, color=COLORES["acento"], fontsize=10, fontweight="bold")
+        pico_t = int(df.loc[idx_pico, "tick"])
+        pico_v = int(df.loc[idx_pico, "I"])
+
+        ax.scatter(
+            pico_t,
+            pico_v,
+            color=COLORES["I"],
+            s=55,
+            zorder=5,
+            edgecolor="white",
+            linewidth=1.1,
+        )
+
+        ax.axvline(
+            pico_t,
+            color=COLORES["I"],
+            alpha=0.22,
+            lw=1.5,
+            ls="--",
+        )
+
+        ax.annotate(
+            f"Pico: día {pico_t}\n{pico_v} infectados",
+            xy=(pico_t, pico_v),
+            xytext=(pico_t + 4, max(pico_v * 0.78, 5)),
+            fontsize=8,
+            color=COLORES["texto"],
+            bbox=dict(
+                boxstyle="round,pad=0.3",
+                facecolor="#ffffff",
+                edgecolor=COLORES["borde"],
+                alpha=0.95,
+            ),
+            arrowprops=dict(
+                arrowstyle="->",
+                color=COLORES["I"],
+                lw=1.0,
+            ),
+        )
+
+        ax.set_title(titulo, color=color_estrategia, fontsize=12)
         ax.set_xlabel("Días desde inicio del brote")
-        ax.set_ylabel("Número de nodos")
-        ax.legend(fontsize=8); ax.grid(True)
+        ax.set_ylabel("Cantidad de nodos")
+        ax.legend(fontsize=8, loc="best")
+
     plt.tight_layout()
-    plt.savefig(os.path.join(OUT, "fig1_curvas_sir.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig1_curvas_sir.png")
+    guardar(fig, "fig1_curvas_sir.png")
+
+
+# ============================================================
+# FIGURA 2: COMPARACIÓN DE ESTRATEGIAS
+# ============================================================
 
 def fig2_comparacion():
-    fig, axes = plt.subplots(1, 3, figsize=(17, 6), facecolor=COLORES["bg"])
-    fig.suptitle("Comparación de Estrategias de Contención",
-                 fontsize=13, color=COLORES["texto"], fontweight="bold")
+    fig, axes = plt.subplots(1, 3, figsize=(17, 6))
+    fig.suptitle(
+        "Comparación de estrategias de contención",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.03,
+    )
 
-    claves  = [k for k in ESTRATEGIAS if k in historias]
-    labels  = [ESTRATEGIAS[k][0] for k in claves]
+    claves = [k for k in ESTRATEGIAS if k in historias]
+    labels = [ESTRATEGIAS[k][0] for k in claves]
     colores = [ESTRATEGIAS[k][1] for k in claves]
-    picos   = [historias[k]["I"].max() for k in claves]
-    total_r = [historias[k]["R"].iloc[-1] for k in claves]
-    baseline = picos[claves.index("ninguna")] if "ninguna" in claves else 1
 
-   
+    picos = [int(historias[k]["I"].max()) for k in claves]
+    total_r = [int(historias[k]["R"].iloc[-1]) for k in claves]
+
+    baseline = picos[claves.index("ninguna")] if "ninguna" in claves else max(picos)
+
+    # Pico de infectados
     ax = axes[0]
-    ax.set_facecolor(COLORES["panel"])
-    bars = ax.bar(labels, picos, color=colores, alpha=0.85, width=0.55,
-                  edgecolor=COLORES["grid"])
+    limpiar_ejes(ax)
+
+    bars = ax.bar(
+        labels,
+        picos,
+        color=colores,
+        alpha=0.90,
+        width=0.62,
+        edgecolor="#ffffff",
+        linewidth=1.2,
+        zorder=3,
+    )
+
     for bar, val in zip(bars, picos):
-        pct = 100*(baseline - val)/baseline
-        ax.text(bar.get_x()+bar.get_width()/2, val+4, str(val),
-                ha="center", fontsize=9, color=COLORES["texto"], fontweight="bold")
+        pct = 100 * (baseline - val) / baseline
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            val + 6,
+            f"{val}",
+            ha="center",
+            fontsize=9,
+            fontweight="bold",
+            color=COLORES["texto"],
+        )
+
         if pct > 0:
-            ax.text(bar.get_x()+bar.get_width()/2, val/2, f"−{pct:.0f}%",
-                    ha="center", fontsize=9, color="white", fontweight="bold")
-    ax.set_title("Pico de infectados", color=COLORES["acento"],
-                 fontsize=10, fontweight="bold")
-    ax.set_ylabel("Nodos infectados (máximo)")
-    ax.tick_params(axis="x", rotation=15); ax.grid(True, axis="y")
+            ax.text(
+                bar.get_x() + bar.get_width() / 2,
+                val * 0.55,
+                f"-{pct:.1f}%",
+                ha="center",
+                fontsize=9,
+                fontweight="bold",
+                color="#ffffff",
+            )
 
+    ax.set_title("Pico máximo de infectados", color=COLORES["texto"])
+    ax.set_ylabel("Nodos infectados")
+    ax.tick_params(axis="x", rotation=18)
+    ax.grid(True, axis="y")
 
+    # Curvas de infectados
     ax = axes[1]
-    ax.set_facecolor(COLORES["panel"])
-    for clave, (label, color) in ESTRATEGIAS.items():
-        if clave in historias:
-            df = historias[clave]
-            ax.plot(df["tick"], df["I"], label=label, color=color,
-                    lw=2.8 if clave=="ninguna" else 2.0,
-                    ls="--" if clave=="ninguna" else "-")
-    ax.set_title("Curva de infectados — todas las estrategias",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
-    ax.set_xlabel("Días"); ax.set_ylabel("Infectados")
-    ax.legend(fontsize=8); ax.grid(True)
+    limpiar_ejes(ax)
 
+    for clave, (label, color) in ESTRATEGIAS.items():
+        if clave not in historias:
+            continue
+
+        df = historias[clave]
+        ax.plot(
+            df["tick"],
+            df["I"],
+            label=label,
+            color=color,
+            lw=3.0 if clave == "ninguna" else 2.4,
+            ls="--" if clave == "ninguna" else "-",
+        )
+
+    ax.set_title("Evolución de infectados", color=COLORES["texto"])
+    ax.set_xlabel("Días")
+    ax.set_ylabel("Infectados")
+    ax.legend(fontsize=8)
+
+    # Total recuperados / afectados
     ax = axes[2]
-    ax.set_facecolor(COLORES["panel"])
-    bars = ax.bar(labels, total_r, color=colores, alpha=0.85, width=0.55,
-                  edgecolor=COLORES["grid"])
+    limpiar_ejes(ax)
+
+    bars = ax.bar(
+        labels,
+        total_r,
+        color=colores,
+        alpha=0.90,
+        width=0.62,
+        edgecolor="#ffffff",
+        linewidth=1.2,
+        zorder=3,
+    )
+
     for bar, val in zip(bars, total_r):
-        ax.text(bar.get_x()+bar.get_width()/2, val+4, str(val),
-                ha="center", fontsize=9, color=COLORES["texto"], fontweight="bold")
-    ax.set_title("Total afectados al día 60\n(acumulado en R)",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
+        ax.text(
+            bar.get_x() + bar.get_width() / 2,
+            val + 6,
+            f"{val}",
+            ha="center",
+            fontsize=9,
+            fontweight="bold",
+            color=COLORES["texto"],
+        )
+
+    ax.set_title("Total acumulado al final de la simulación", color=COLORES["texto"])
     ax.set_ylabel("Nodos en estado R")
-    ax.tick_params(axis="x", rotation=15); ax.grid(True, axis="y")
+    ax.tick_params(axis="x", rotation=18)
+    ax.grid(True, axis="y")
 
     plt.tight_layout()
-    plt.savefig(os.path.join(OUT, "fig2_comparacion.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig2_comparacion.png")
+    guardar(fig, "fig2_comparacion.png")
+
+
 
 def fig3_grafo():
     if nodos is None or aristas is None:
-        print("[!] fig3 omitida")
+        print("[!] fig3 omitida: faltan grafo_nodos.csv o grafo_aristas.csv")
         return
-    G = nx.Graph()
-    color_mapa = {"S": COLORES["S"], "I": COLORES["I"], "R": COLORES["R"]}
-    for _, row in nodos.iterrows():
-        G.add_node(row["id"], estado=row["estado"], tipo=row["tipo"], depto=row["depto"])
-    for _, row in aristas.iterrows():
-        G.add_edge(row["origen"], row["destino"], weight=row["peso"])
 
-    comps   = sorted(nx.connected_components(G), key=len, reverse=True)
+    G = nx.Graph()
+
+    color_mapa = {
+        "S": COLORES["S"],
+        "I": COLORES["I"],
+        "R": COLORES["R"],
+    }
+
+    for _, row in nodos.iterrows():
+        G.add_node(
+            row["id"],
+            estado=row.get("estado", "S"),
+            tipo=row.get("tipo", ""),
+            depto=row.get("depto", ""),
+        )
+
+    for _, row in aristas.iterrows():
+        G.add_edge(
+            row["origen"],
+            row["destino"],
+            weight=row.get("peso", 1.0),
+        )
+
+    comps = sorted(nx.connected_components(G), key=len, reverse=True)
+
+    if not comps:
+        print("[!] fig3 omitida: el grafo está vacío")
+        return
+
     G_giant = G.subgraph(comps[0]).copy()
 
-    fig, axes = plt.subplots(1, 2, figsize=(16, 7), facecolor=COLORES["bg"])
-    fig.suptitle("Red de Contagio COVID-19 Colombia",
-                 fontsize=13, color=COLORES["texto"], fontweight="bold")
+    fig, axes = plt.subplots(1, 2, figsize=(16, 7))
+    fig.suptitle(
+        "Estructura de la red de contagio",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.02,
+    )
 
-    for ax, (G_plot, titulo) in zip(axes, [
-        (G_giant, f"Componente gigante ({G_giant.number_of_nodes()} nodos)"),
-        (G,       f"Grafo completo ({G.number_of_nodes()} nodos, {G.number_of_edges()} aristas)"),
-    ]):
-        ax.set_facecolor(COLORES["panel"])
-        ax.set_title(titulo, color=COLORES["acento"], fontsize=10)
-        pos    = nx.spring_layout(G_plot, seed=42, k=0.6)
-        colores = [color_mapa.get(G_plot.nodes[n].get("estado","S"), COLORES["S"])
-                   for n in G_plot.nodes()]
-        sizes  = [20 + G_plot.degree(n)*12 for n in G_plot.nodes()]
-        pesos  = [G_plot[u][v].get("weight",0.5) for u,v in G_plot.edges()]
-        nx.draw_networkx_edges(G_plot, pos, ax=ax, alpha=0.25,
-                               edge_color=COLORES["grid"],
-                               width=[p*2 for p in pesos])
-        nx.draw_networkx_nodes(G_plot, pos, ax=ax,
-                               node_color=colores, node_size=sizes, alpha=0.9)
-        hubs = {n: str(n) for n in G_plot.nodes() if G_plot.degree(n) >= 5}
-        nx.draw_networkx_labels(G_plot, pos, labels=hubs, ax=ax,
-                                font_size=6, font_color=COLORES["texto"])
+    graficos = [
+        (G_giant, f"Componente gigante\n{G_giant.number_of_nodes()} nodos"),
+        (G, f"Grafo completo\n{G.number_of_nodes()} nodos, {G.number_of_edges()} aristas"),
+    ]
+
+    for ax, (G_plot, titulo) in zip(axes, graficos):
+        ax.set_title(titulo, color=COLORES["texto"], fontsize=12)
+        ax.set_facecolor("#f1f5f9")
+
+        pos = nx.spring_layout(G_plot, seed=42, k=0.6)
+
+        node_colors = [
+            color_mapa.get(G_plot.nodes[n].get("estado", "S"), COLORES["S"])
+            for n in G_plot.nodes()
+        ]
+
+        node_sizes = [
+            18 + G_plot.degree(n) * 10
+            for n in G_plot.nodes()
+        ]
+
+        edge_widths = [
+            max(0.3, G_plot[u][v].get("weight", 0.5) * 1.8)
+            for u, v in G_plot.edges()
+        ]
+
+        nx.draw_networkx_edges(
+            G_plot,
+            pos,
+            ax=ax,
+            alpha=0.18,
+            edge_color="#64748b",
+            width=edge_widths,
+        )
+
+        nx.draw_networkx_nodes(
+            G_plot,
+            pos,
+            ax=ax,
+            node_color=node_colors,
+            node_size=node_sizes,
+            alpha=0.88,
+            linewidths=0.35,
+            edgecolors="#ffffff",
+        )
+
+        hubs = {
+            n: str(n)
+            for n in G_plot.nodes()
+            if G_plot.degree(n) >= 5
+        }
+
+        nx.draw_networkx_labels(
+            G_plot,
+            pos,
+            labels=hubs,
+            ax=ax,
+            font_size=6,
+            font_color=COLORES["texto"],
+        )
+
         ax.axis("off")
 
-    leyenda = [mpatches.Patch(color=COLORES[k], label=l)
-               for k,l in [("I","Importado (semilla I)"),
-                            ("S","Susceptible"),("R","Recuperado")]]
-    fig.legend(handles=leyenda, loc="lower center", ncol=3, fontsize=9)
-    plt.tight_layout()
-    plt.savefig(os.path.join(OUT, "fig3_grafo.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig3_grafo.png")
+    leyenda = [
+        mpatches.Patch(color=COLORES["I"], label="Infectado / importado"),
+        mpatches.Patch(color=COLORES["S"], label="Susceptible"),
+        mpatches.Patch(color=COLORES["R"], label="Recuperado"),
+    ]
+
+    fig.legend(
+        handles=leyenda,
+        loc="lower center",
+        ncol=3,
+        fontsize=9,
+        frameon=True,
+    )
+
+    plt.tight_layout(rect=[0, 0.05, 1, 1])
+    guardar(fig, "fig3_grafo.png")
+
+
 
 def fig4_analisis_red():
     if grados_df is None or centralidades is None or componentes is None:
-        print("[!] fig4 omitida")
+        print("[!] fig4 omitida: faltan archivos de métricas de red")
         return
 
-    fig, axes = plt.subplots(2, 2, figsize=(15, 10), facecolor=COLORES["bg"])
-    fig.suptitle("Análisis de la Red de Contagio",
-                 fontsize=13, color=COLORES["texto"], fontweight="bold")
+    fig, axes = plt.subplots(2, 2, figsize=(15, 10))
+    fig.suptitle(
+        "Métricas estructurales de la red de contagio",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.02,
+    )
 
+    # Distribución de grados
     ax = axes[0, 0]
-    ax.set_facecolor(COLORES["panel"])
-    gv = grados_df["grado"]
-    ax.hist(gv, bins=range(0, int(gv.max())+2), color=COLORES["acento"],
-            alpha=0.85, edgecolor=COLORES["grid"], linewidth=0.6)
-    ax.axvline(gv.mean(), color=COLORES["I"], lw=2, ls="--",
-               label=f"Media: {gv.mean():.2f}")
-    ax.set_title("Distribución de Grados", color=COLORES["acento"],
-                 fontsize=10, fontweight="bold")
-    ax.set_xlabel("Grado (conexiones)"); ax.set_ylabel("Frecuencia")
-    ax.legend(fontsize=8); ax.grid(True, axis="y")
+    limpiar_ejes(ax)
 
-    
+    gv = grados_df["grado"]
+
+    ax.hist(
+        gv,
+        bins=range(0, int(gv.max()) + 2),
+        color=COLORES["acento"],
+        alpha=0.85,
+        edgecolor="#ffffff",
+        linewidth=0.8,
+        zorder=3,
+    )
+
+    ax.axvline(
+        gv.mean(),
+        color=COLORES["I"],
+        lw=2,
+        ls="--",
+        label=f"Media: {gv.mean():.2f}",
+    )
+
+    ax.set_title("Distribución de grados")
+    ax.set_xlabel("Grado")
+    ax.set_ylabel("Frecuencia")
+    ax.legend(fontsize=8)
+    ax.grid(True, axis="y")
+
+    # Boxplot por tipo
     ax = axes[0, 1]
-    ax.set_facecolor(COLORES["panel"])
-    tipos_unicos = grados_df["tipo"].unique()
-    col_tipo = {"Importado": COLORES["I"], "Relacionado": COLORES["acento"],
-                "En estudio": COLORES["S"]}
-    data_tipo = [grados_df[grados_df["tipo"]==t]["grado"].values for t in tipos_unicos]
-    bp = ax.boxplot(data_tipo, patch_artist=True,
-                    medianprops=dict(color="white", lw=2))
+    limpiar_ejes(ax)
+
+    tipos_unicos = grados_df["tipo"].dropna().unique()
+
+    col_tipo = {
+        "Importado": COLORES["I"],
+        "Relacionado": COLORES["acento"],
+        "En estudio": COLORES["S"],
+    }
+
+    data_tipo = [
+        grados_df[grados_df["tipo"] == t]["grado"].values
+        for t in tipos_unicos
+    ]
+
+    bp = ax.boxplot(
+        data_tipo,
+        patch_artist=True,
+        medianprops=dict(color="#ffffff", lw=2),
+        boxprops=dict(linewidth=1.0),
+        whiskerprops=dict(color=COLORES["gris"]),
+        capprops=dict(color=COLORES["gris"]),
+    )
+
     for patch, tipo in zip(bp["boxes"], tipos_unicos):
         patch.set_facecolor(col_tipo.get(tipo, COLORES["grid"]))
-        patch.set_alpha(0.75)
-    ax.set_xticklabels(tipos_unicos, rotation=10)
-    ax.set_title("Grados por Tipo de Caso", color=COLORES["acento"],
-                 fontsize=10, fontweight="bold")
-    ax.set_ylabel("Grado"); ax.grid(True, axis="y")
-    ax = axes[1, 0]
-    ax.set_facecolor(COLORES["panel"])
-    for tipo, color in [("Importado", COLORES["I"]),
-                        ("Relacionado", COLORES["acento"]),
-                        ("En estudio", COLORES["S"])]:
-        sub = centralidades[centralidades["tipo"]==tipo]
-        ax.scatter(sub["centralidad_grado"], sub["betweenness"],
-                   alpha=0.6, s=15, color=color, label=tipo)
-    ax.set_title("Centralidad de Grado vs Betweenness",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
-    ax.set_xlabel("Centralidad de grado C_D(v)")
-    ax.set_ylabel("Betweenness C_B(v)")
-    ax.legend(fontsize=8); ax.grid(True)
+        patch.set_alpha(0.82)
+        patch.set_edgecolor("#ffffff")
 
-    # componentes conexas
+    ax.set_xticklabels(tipos_unicos, rotation=10)
+    ax.set_title("Grado por tipo de caso")
+    ax.set_ylabel("Grado")
+    ax.grid(True, axis="y")
+
+    # Centralidad grado vs betweenness
+    ax = axes[1, 0]
+    limpiar_ejes(ax)
+
+    for tipo, color in [
+        ("Importado", COLORES["I"]),
+        ("Relacionado", COLORES["acento"]),
+        ("En estudio", COLORES["S"]),
+    ]:
+        sub = centralidades[centralidades["tipo"] == tipo]
+
+        if len(sub) == 0:
+            continue
+
+        ax.scatter(
+            sub["centralidad_grado"],
+            sub["betweenness"],
+            alpha=0.62,
+            s=22,
+            color=color,
+            label=tipo,
+            edgecolor="#ffffff",
+            linewidth=0.35,
+        )
+
+    ax.set_title("Centralidad de grado vs betweenness")
+    ax.set_xlabel("Centralidad de grado")
+    ax.set_ylabel("Betweenness")
+    ax.legend(fontsize=8)
+
+    # Componentes conexas
     ax = axes[1, 1]
-    ax.set_facecolor(COLORES["panel"])
+    limpiar_ejes(ax)
+
     tam_comps = componentes.groupby("componente_id")["tamano_componente"].first()
     freq = tam_comps.value_counts().sort_index()
-    ax.bar(freq.index.astype(str), freq.values, color=COLORES["acento"],
-           alpha=0.85, edgecolor=COLORES["grid"], linewidth=0.6)
-    ax.set_title(f"Tamaño de Componentes Conexas\n({len(tam_comps)} componentes)",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
-    ax.set_xlabel("Tamaño (nodos)"); ax.set_ylabel("Número de componentes")
-    ax.tick_params(axis="x", rotation=30); ax.grid(True, axis="y")
+
+    ax.bar(
+        freq.index.astype(str),
+        freq.values,
+        color=COLORES["acento2"],
+        alpha=0.88,
+        edgecolor="#ffffff",
+        linewidth=0.8,
+        zorder=3,
+    )
+
+    ax.set_title(f"Componentes conexas ({len(tam_comps)} componentes)")
+    ax.set_xlabel("Tamaño de componente")
+    ax.set_ylabel("Número de componentes")
+    ax.tick_params(axis="x", rotation=30)
+    ax.grid(True, axis="y")
 
     plt.tight_layout()
-    plt.savefig(os.path.join(OUT, "fig4_analisis_red.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig4_analisis_red.png")
+    guardar(fig, "fig4_analisis_red.png")
+
+
 
 def fig5_departamentos():
     if nodos is None or grados_df is None:
-        print("[!] fig5 omitida")
+        print("[!] fig5 omitida: faltan nodos o grados")
         return
 
-    fig, axes = plt.subplots(1, 3, figsize=(17, 6), facecolor=COLORES["bg"])
-    fig.suptitle("Distribución de Casos por Departamento",
-                 fontsize=13, color=COLORES["texto"], fontweight="bold")
+    fig, axes = plt.subplots(1, 3, figsize=(17, 6))
+    fig.suptitle(
+        "Distribución territorial de casos y conectividad",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.03,
+    )
 
-
+    # Top departamentos
     ax = axes[0]
-    ax.set_facecolor(COLORES["panel"])
+    limpiar_ejes(ax)
+
     top = nodos["depto"].value_counts().head(10)
-    ax.barh(top.index[::-1], top.values[::-1],
-            color=COLORES["acento"], alpha=0.85, edgecolor=COLORES["grid"])
+
+    ax.barh(
+        top.index[::-1],
+        top.values[::-1],
+        color=COLORES["acento"],
+        alpha=0.88,
+        edgecolor="#ffffff",
+        linewidth=0.8,
+        zorder=3,
+    )
+
     for i, val in enumerate(top.values[::-1]):
-        ax.text(val+1, i, str(val), va="center", fontsize=8, color=COLORES["texto"])
-    ax.set_title("Top 10 Departamentos", color=COLORES["acento"],
-                 fontsize=10, fontweight="bold")
-    ax.set_xlabel("Número de casos"); ax.grid(True, axis="x")
+        ax.text(
+            val + 1,
+            i,
+            str(val),
+            va="center",
+            fontsize=8,
+            color=COLORES["texto"],
+            fontweight="bold",
+        )
 
+    ax.set_title("Top 10 departamentos por número de casos")
+    ax.set_xlabel("Número de casos")
+    ax.grid(True, axis="x")
 
+    # Composición SIR por departamento
     ax = axes[1]
-    ax.set_facecolor(COLORES["panel"])
+    limpiar_ejes(ax)
+
     top_deptos = nodos["depto"].value_counts().head(8).index
     sub = nodos[nodos["depto"].isin(top_deptos)]
-    pivot = sub.groupby(["depto","estado"]).size().unstack(fill_value=0)
+
+    pivot = sub.groupby(["depto", "estado"]).size().unstack(fill_value=0)
     pivot["total"] = pivot.sum(axis=1)
     pivot = pivot.sort_values("total", ascending=True).drop("total", axis=1)
+
     bottom = np.zeros(len(pivot))
-    for estado, color in [("S",COLORES["S"]),("I",COLORES["I"]),("R",COLORES["R"])]:
+
+    for estado, color in [
+        ("S", COLORES["S"]),
+        ("I", COLORES["I"]),
+        ("R", COLORES["R"]),
+    ]:
         if estado in pivot.columns:
             vals = pivot[estado].values
-            ax.barh(pivot.index, vals, left=bottom, color=color, alpha=0.85, label=estado)
+            ax.barh(
+                pivot.index,
+                vals,
+                left=bottom,
+                color=color,
+                alpha=0.88,
+                label=estado,
+                edgecolor="#ffffff",
+                linewidth=0.4,
+                zorder=3,
+            )
             bottom += vals
-    ax.set_title("Composición SIR por Departamento",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
-    ax.set_xlabel("Nodos"); ax.legend(fontsize=8); ax.grid(True, axis="x")
 
+    ax.set_title("Composición SIR por departamento")
+    ax.set_xlabel("Nodos")
+    ax.legend(fontsize=8)
+    ax.grid(True, axis="x")
 
+    # Grado promedio por departamento
     ax = axes[2]
-    ax.set_facecolor(COLORES["panel"])
-    merged = grados_df.copy()  # depto ya está en grados_df
-    grado_depto = (merged.groupby("depto")["grado"].mean()
-                         .sort_values(ascending=False).head(10))
-    ax.barh(grado_depto.index[::-1], grado_depto.values[::-1],
-            color=COLORES["R"], alpha=0.85, edgecolor=COLORES["grid"])
+    limpiar_ejes(ax)
+
+    grado_depto = (
+        grados_df.groupby("depto")["grado"]
+        .mean()
+        .sort_values(ascending=False)
+        .head(10)
+    )
+
+    ax.barh(
+        grado_depto.index[::-1],
+        grado_depto.values[::-1],
+        color=COLORES["R"],
+        alpha=0.88,
+        edgecolor="#ffffff",
+        linewidth=0.8,
+        zorder=3,
+    )
+
     for i, val in enumerate(grado_depto.values[::-1]):
-        ax.text(val+0.02, i, f"{val:.2f}", va="center", fontsize=8,
-                color=COLORES["texto"])
-    ax.set_title("Grado Promedio por Departamento\n(conectividad de contagio)",
-                 color=COLORES["acento"], fontsize=10, fontweight="bold")
-    ax.set_xlabel("Grado promedio"); ax.grid(True, axis="x")
+        ax.text(
+            val + 0.02,
+            i,
+            f"{val:.2f}",
+            va="center",
+            fontsize=8,
+            color=COLORES["texto"],
+            fontweight="bold",
+        )
+
+    ax.set_title("Conectividad promedio por departamento")
+    ax.set_xlabel("Grado promedio")
+    ax.grid(True, axis="x")
 
     plt.tight_layout()
-    plt.savefig(os.path.join(OUT, "fig5_departamentos.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig5_departamentos.png")
-def fig6_resumen():
-    fig = plt.figure(figsize=(16, 9), facecolor=COLORES["bg"])
-    gs  = gridspec.GridSpec(2, 3, hspace=0.5, wspace=0.4, figure=fig)
-    fig.suptitle("Resumen Ejecutivo — Simulador SIR Colombia C++",
-                 fontsize=13, color=COLORES["texto"], fontweight="bold")
+    guardar(fig, "fig5_departamentos.png")
 
-    
+
+def fig6_resumen():
+    fig = plt.figure(figsize=(16, 9))
+    gs = gridspec.GridSpec(2, 3, hspace=0.5, wspace=0.4, figure=fig)
+
+    fig.suptitle(
+        "Resumen comparativo del simulador epidemiológico SIR",
+        fontsize=15,
+        fontweight="bold",
+        color=COLORES["texto"],
+        y=1.02,
+    )
+
+    # Heatmap SIR 
     ax = fig.add_subplot(gs[0, :2])
-    ax.set_facecolor(COLORES["panel"])
+    limpiar_ejes(ax)
+
     if "ninguna" in historias:
         df = historias["ninguna"]
-        matriz = np.array([df["S"].values, df["I"].values, df["R"].values])
-        im = ax.imshow(matriz, aspect="auto", cmap="RdYlGn_r",
-                       interpolation="nearest")
-        ax.set_yticks([0,1,2]); ax.set_yticklabels(["S","I","R"], fontsize=10)
+
+        matriz = np.array([
+            df["S"].values,
+            df["I"].values,
+            df["R"].values,
+        ])
+
+        im = ax.imshow(
+            matriz,
+            aspect="auto",
+            cmap="viridis",
+            interpolation="nearest",
+        )
+
+        ax.set_yticks([0, 1, 2])
+        ax.set_yticklabels(["S", "I", "R"])
         ax.set_xlabel("Días")
-        ax.set_title("Evolución SIR — Sin intervención (heatmap)",
-                     color=COLORES["acento"], fontsize=10, fontweight="bold")
-        plt.colorbar(im, ax=ax, shrink=0.8, label="Nodos")
+        ax.set_title("Evolución SIR sin intervención")
 
+        cbar = plt.colorbar(im, ax=ax, shrink=0.82)
+        cbar.set_label("Nodos")
 
+    # Tabla de métricas
     ax = fig.add_subplot(gs[0, 2])
-    ax.set_facecolor(COLORES["panel"]); ax.axis("off")
-    claves  = [k for k in ESTRATEGIAS if k in historias]
-    picos   = [historias[k]["I"].max() for k in claves]
-    dias_p  = [int(historias[k]["tick"][historias[k]["I"].idxmax()]) for k in claves]
-    base    = picos[0] if picos else 1
-    tabla_d = [[ESTRATEGIAS[k][0][:14], str(p), str(d), f"{100*(base-p)/base:.0f}%"]
-               for k,p,d in zip(claves,picos,dias_p)]
-    tabla = ax.table(cellText=tabla_d,
-                     colLabels=["Estrategia","Pico I","Día","Reduc."],
-                     cellLoc="center", loc="center")
-    tabla.auto_set_font_size(False); tabla.set_fontsize(8); tabla.scale(1, 1.6)
-    for (r,c), cell in tabla.get_celld().items():
-        cell.set_facecolor(COLORES["panel"] if r>0 else COLORES["grid"])
-        cell.set_edgecolor(COLORES["grid"])
-        cell.set_text_props(color=COLORES["texto"])
-    ax.set_title("Métricas por Estrategia", color=COLORES["acento"],
-                 fontsize=10, fontweight="bold")
-
-    # Curvas I 
-    ax = fig.add_subplot(gs[1, :])
     ax.set_facecolor(COLORES["panel"])
+    ax.axis("off")
+
+    claves = [k for k in ESTRATEGIAS if k in historias]
+    picos = [int(historias[k]["I"].max()) for k in claves]
+    dias_p = [
+        int(historias[k].loc[historias[k]["I"].idxmax(), "tick"])
+        for k in claves
+    ]
+
+    base = picos[claves.index("ninguna")] if "ninguna" in claves else max(picos)
+
+    tabla_d = [
+        [
+            ESTRATEGIAS[k][0][:18],
+            str(p),
+            str(d),
+            f"{100 * (base - p) / base:.1f}%",
+        ]
+        for k, p, d in zip(claves, picos, dias_p)
+    ]
+
+    tabla = ax.table(
+        cellText=tabla_d,
+        colLabels=["Estrategia", "Pico I", "Día", "Reducción"],
+        cellLoc="center",
+        loc="center",
+    )
+
+    tabla.auto_set_font_size(False)
+    tabla.set_fontsize(8)
+    tabla.scale(1, 1.6)
+
+    for (r, c), cell in tabla.get_celld().items():
+        if r == 0:
+            cell.set_facecolor(COLORES["acento"])
+            cell.set_text_props(color="#ffffff", fontweight="bold")
+        else:
+            cell.set_facecolor("#ffffff")
+            cell.set_text_props(color=COLORES["texto"])
+
+        cell.set_edgecolor(COLORES["borde"])
+
+    ax.set_title("Indicadores principales", color=COLORES["texto"], fontweight="bold")
+
+    # Curvas finales de infectados
+    ax = fig.add_subplot(gs[1, :])
+    limpiar_ejes(ax)
+
     for clave, (label, color) in ESTRATEGIAS.items():
         if clave in historias:
             df = historias[clave]
-            ax.fill_between(df["tick"], df["I"], alpha=0.15, color=color)
-            ax.plot(df["tick"], df["I"], lw=2, color=color, label=label)
-    ax.set_title("Progresión de Infectados — Comparación Final",
-                 color=COLORES["acento"], fontsize=11, fontweight="bold")
+            ax.fill_between(
+                df["tick"],
+                df["I"],
+                alpha=0.12,
+                color=color,
+            )
+            ax.plot(
+                df["tick"],
+                df["I"],
+                lw=2.7,
+                color=color,
+                label=label,
+            )
+
+    ax.set_title("Comparación final de infectados por estrategia")
     ax.set_xlabel("Días desde inicio del brote")
     ax.set_ylabel("Nodos infectados")
-    ax.legend(fontsize=9); ax.grid(True)
+    ax.legend(fontsize=9)
 
-    plt.savefig(os.path.join(OUT, "fig6_resumen.png"), dpi=150,
-                bbox_inches="tight", facecolor=COLORES["bg"])
-    plt.close()
-    print("[✓] fig6_resumen.png")
+    guardar(fig, "fig6_resumen.png")
 
 if __name__ == "__main__":
-    print("=" * 55)
-    print("  Generando visualizaciones...")
-    print("=" * 55)
+
+    if not validar_datos_minimos():
+        sys.exit(1)
+
     fig1_curvas_sir()
     fig2_comparacion()
     fig3_grafo()
     fig4_analisis_red()
     fig5_departamentos()
     fig6_resumen()
-    print("\n" + "=" * 55)
-    print(f"  6 figuras guardadas en: {OUT}/")
-    print("  fig1_curvas_sir.png     — Curvas SIR por estrategia")
-    print("  fig2_comparacion.png    — Comparación de efectividad")
-    print("  fig3_grafo.png          — Visualización del grafo")
-    print("  fig4_analisis_red.png   — Métricas de la red")
-    print("  fig5_departamentos.png  — Análisis por departamento")
-    print("  fig6_resumen.png        — Resumen ejecutivo")
-    print("=" * 55)
+
+    print("\n" + "=" * 60)
+    print(f"  Figuras guardadas en: {OUT}/")
+    print("  fig1_curvas_sir.png")
+    print("  fig2_comparacion.png")
+    print("  fig3_grafo.png")
+    print("  fig4_analisis_red.png")
+    print("  fig5_departamentos.png")
+    print("  fig6_resumen.png")
+    print("=" * 60)
