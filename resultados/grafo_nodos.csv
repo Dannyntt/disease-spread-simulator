@@ -1,0 +1,1162 @@
+id,estado,tipo,depto,ciudad,edad,sexo,fecha
+1161,I,Importado,Bogotá D.C.,Bogotá,22,M,02/04/2020
+1160,S,En estudio,Bogotá D.C.,Bogotá,48,M,02/04/2020
+1159,S,En estudio,Bogotá D.C.,Bogotá,3,M,02/04/2020
+1158,S,En estudio,Bogotá D.C.,Bogotá,38,F,02/04/2020
+1157,I,Importado,Bogotá D.C.,Bogotá,28,M,02/04/2020
+1156,I,Importado,Bogotá D.C.,Bogotá,32,M,02/04/2020
+1155,S,En estudio,Bogotá D.C.,Bogotá,42,F,02/04/2020
+1154,I,Importado,Bogotá D.C.,Bogotá,20,M,02/04/2020
+1153,S,En estudio,Bogotá D.C.,Bogotá,34,M,02/04/2020
+1152,S,Relacionado,Bogotá D.C.,Bogotá,34,F,02/04/2020
+1151,S,En estudio,Bogotá D.C.,Bogotá,47,F,02/04/2020
+1150,S,En estudio,Bogotá D.C.,Bogotá,50,M,02/04/2020
+1149,S,En estudio,Bogotá D.C.,Bogotá,49,F,02/04/2020
+1148,S,En estudio,Bogotá D.C.,Bogotá,52,M,02/04/2020
+1147,S,En estudio,Bogotá D.C.,Bogotá,27,F,02/04/2020
+1146,S,En estudio,Bogotá D.C.,Bogotá,10,M,02/04/2020
+1145,S,En estudio,Bogotá D.C.,Bogotá,29,F,02/04/2020
+1144,S,En estudio,Bogotá D.C.,Bogotá,60,M,02/04/2020
+1143,S,En estudio,Bogotá D.C.,Bogotá,47,F,02/04/2020
+1142,S,En estudio,Bogotá D.C.,Bogotá,10,M,02/04/2020
+1141,S,En estudio,Bogotá D.C.,Bogotá,69,M,02/04/2020
+1140,S,En estudio,Bogotá D.C.,Bogotá,22,F,02/04/2020
+1139,S,En estudio,Bogotá D.C.,Bogotá,25,F,02/04/2020
+1138,I,Importado,Bogotá D.C.,Bogotá,40,M,02/04/2020
+1137,S,En estudio,Bogotá D.C.,Bogotá,32,F,02/04/2020
+1136,S,En estudio,Bogotá D.C.,Bogotá,29,F,02/04/2020
+1135,I,Importado,Bogotá D.C.,Bogotá,67,F,02/04/2020
+1134,S,En estudio,Bogotá D.C.,Bogotá,28,F,02/04/2020
+1133,S,En estudio,Bogotá D.C.,Bogotá,59,M,02/04/2020
+1132,S,En estudio,Bogotá D.C.,Bogotá,67,F,02/04/2020
+1131,S,En estudio,Bogotá D.C.,Bogotá,69,M,02/04/2020
+1130,S,En estudio,Bogotá D.C.,Bogotá,37,F,02/04/2020
+1129,S,En estudio,Bogotá D.C.,Bogotá,60,M,02/04/2020
+1128,I,Importado,Bogotá D.C.,Bogotá,47,F,02/04/2020
+1127,I,Importado,Bogotá D.C.,Bogotá,25,M,02/04/2020
+1126,S,En estudio,Bogotá D.C.,Bogotá,5,F,02/04/2020
+1125,I,Importado,Bogotá D.C.,Bogotá,59,F,02/04/2020
+1124,I,Importado,Bogotá D.C.,Bogotá,55,F,02/04/2020
+1123,S,Relacionado,Bogotá D.C.,Bogotá,84,F,02/04/2020
+1122,I,Importado,Bogotá D.C.,Bogotá,39,F,02/04/2020
+1121,S,En estudio,Bogotá D.C.,Bogotá,62,M,02/04/2020
+1120,I,Importado,Bogotá D.C.,Bogotá,50,M,02/04/2020
+1119,S,En estudio,Bogotá D.C.,Bogotá,74,F,02/04/2020
+1118,S,En estudio,Bogotá D.C.,Bogotá,52,F,02/04/2020
+1117,S,En estudio,Bogotá D.C.,Bogotá,39,F,02/04/2020
+1116,I,Importado,Bogotá D.C.,Bogotá,38,F,02/04/2020
+1115,S,En estudio,Bogotá D.C.,Bogotá,50,F,02/04/2020
+1114,S,En estudio,Bogotá D.C.,Bogotá,28,F,02/04/2020
+1113,S,En estudio,Bogotá D.C.,Bogotá,44,M,02/04/2020
+1112,I,Importado,Bogotá D.C.,Bogotá,29,M,02/04/2020
+1111,S,En estudio,Bogotá D.C.,Bogotá,24,M,02/04/2020
+1110,S,En estudio,Bogotá D.C.,Bogotá,21,F,02/04/2020
+541,S,Relacionado,Valle del Cauca,Cali,57,F,28/3/2020
+540,I,Importado,Cundinamarca,Mosquera,37,M,28/3/2020
+539,S,Relacionado,Caldas,Manizales,81,M,27/3/2020
+538,S,En estudio,Santa Marta D.T. y C.,Santa Marta,49,F,27/3/2020
+537,S,Relacionado,Quindío,Armenia,34,F,27/3/2020
+536,I,Importado,Quindío,Armenia,24,M,27/3/2020
+535,S,Relacionado,Atlántico,Soledad,50,M,27/3/2020
+534,I,Importado,Quindío,Armenia,26,M,27/3/2020
+533,I,Importado,Barranquilla D.E.,Barranquilla,25,M,27/3/2020
+532,S,En estudio,Atlántico,Puerto Colombia,47,F,27/3/2020
+531,S,En estudio,Santa Marta D.T. y C.,Santa Marta,34,F,27/3/2020
+530,S,Relacionado,Bogotá D.C.,Bogotá,43,M,27/3/2020
+529,S,Relacionado,Bogotá D.C.,Bogotá,51,M,27/3/2020
+528,S,Relacionado,Bogotá D.C.,Bogotá,33,F,27/3/2020
+527,S,Relacionado,Bogotá D.C.,Bogotá,56,F,27/3/2020
+526,S,Relacionado,Bogotá D.C.,Bogotá,36,F,27/3/2020
+525,I,Importado,Bogotá D.C.,Bogotá,32,M,27/3/2020
+524,I,Importado,Bogotá D.C.,Bogotá,37,M,27/3/2020
+523,I,Importado,Bogotá D.C.,Bogotá,62,F,27/3/2020
+522,S,Relacionado,Bogotá D.C.,Bogotá,24,F,27/3/2020
+521,S,Relacionado,Bogotá D.C.,Bogotá,26,M,27/3/2020
+520,S,Relacionado,Bogotá D.C.,Bogotá,47,M,27/3/2020
+519,S,Relacionado,Bogotá D.C.,Bogotá,20,M,27/3/2020
+518,S,Relacionado,Bogotá D.C.,Bogotá,24,F,27/3/2020
+517,S,Relacionado,Bogotá D.C.,Bogotá,30,F,27/3/2020
+516,I,Importado,Bogotá D.C.,Bogotá,80,F,27/3/2020
+515,I,Importado,Bogotá D.C.,Bogotá,50,M,27/3/2020
+514,S,Relacionado,Bogotá D.C.,Bogotá,71,M,27/3/2020
+513,S,En estudio,Bogotá D.C.,Bogotá,71,M,27/3/2020
+512,I,Importado,Bogotá D.C.,Bogotá,35,M,27/3/2020
+511,S,En estudio,Bogotá D.C.,Bogotá,74,F,27/3/2020
+510,S,En estudio,Bogotá D.C.,Bogotá,72,M,27/3/2020
+509,S,En estudio,Bogotá D.C.,Bogotá,37,M,27/3/2020
+508,I,Importado,Bogotá D.C.,Bogotá,35,M,27/3/2020
+507,I,Importado,Bogotá D.C.,Bogotá,47,F,27/3/2020
+506,I,Importado,Cundinamarca,Tocancipá,34,F,27/3/2020
+505,I,Importado,Bogotá D.C.,Bogotá,52,M,27/3/2020
+504,I,Importado,Bogotá D.C.,Bogotá,27,M,27/3/2020
+503,I,Importado,Bogotá D.C.,Bogotá,50,M,27/3/2020
+502,S,Relacionado,Bogotá D.C.,Bogotá,31,M,27/3/2020
+501,S,Relacionado,Bogotá D.C.,Bogotá,28,M,27/3/2020
+500,I,Importado,Bogotá D.C.,Bogotá,28,F,27/3/2020
+499,I,Importado,Bogotá D.C.,Bogotá,42,F,27/3/2020
+498,I,Importado,Bogotá D.C.,Bogotá,48,M,27/3/2020
+497,I,Importado,Bogotá D.C.,Bogotá,34,M,27/3/2020
+496,I,Importado,Bogotá D.C.,Bogotá,32,F,27/3/2020
+495,I,Importado,Bogotá D.C.,Bogotá,35,M,27/3/2020
+494,S,En estudio,Bogotá D.C.,Bogotá,23,F,27/3/2020
+493,S,Relacionado,Bogotá D.C.,Bogotá,65,M,27/3/2020
+492,I,Importado,Bogotá D.C.,Bogotá,85,M,27/3/2020
+491,S,En estudio,Bogotá D.C.,Bogotá,84,M,26/03/2020
+490,I,Importado,Valle del Cauca,Cali,32,M,26/03/2020
+489,I,Importado,Boyacá,Tunja,69,M,26/03/2020
+488,S,Relacionado,Valle del Cauca,Cali,27,M,26/03/2020
+487,I,Importado,Bogotá D.C.,Bogotá,22,M,26/03/2020
+486,I,Importado,Bogotá D.C.,Bogotá,37,F,26/03/2020
+485,S,Relacionado,Bogotá D.C.,Bogotá,30,M,26/03/2020
+484,S,Relacionado,Bogotá D.C.,Bogotá,39,M,26/03/2020
+483,S,En estudio,Bogotá D.C.,Bogotá,51,M,26/03/2020
+482,I,Importado,Bogotá D.C.,Bogotá,50,M,26/03/2020
+481,S,Relacionado,Bogotá D.C.,Bogotá,42,M,25/03/2020
+480,I,Importado,Bogotá D.C.,Bogotá,57,F,25/03/2020
+479,S,Relacionado,Bogotá D.C.,Bogotá,61,F,25/03/2020
+478,S,Relacionado,Bogotá D.C.,Bogotá,84,F,25/03/2020
+477,I,Importado,Bogotá D.C.,Bogotá,30,F,25/03/2020
+476,I,Importado,Bogotá D.C.,Bogotá,41,M,25/03/2020
+475,I,Importado,Bogotá D.C.,Bogotá,37,F,25/03/2020
+474,S,Relacionado,Bogotá D.C.,Bogotá,33,F,25/03/2020
+473,S,Relacionado,Bogotá D.C.,Bogotá,40,F,25/03/2020
+472,I,Importado,Bogotá D.C.,Bogotá,19,F,25/03/2020
+471,I,Importado,Barranquilla D.E.,Barranquilla,50,F,25/03/2020
+470,S,Relacionado,Cauca,Popayán,45,F,25/03/2020
+469,S,Relacionado,Cauca,Popayán,32,F,25/03/2020
+468,S,Relacionado,Cauca,Popayán,3,F,25/03/2020
+467,S,En estudio,Norte de Santander,Cúcuta,33,M,25/03/2020
+466,S,En estudio,Antioquia,Medellín,32,F,25/03/2020
+465,S,En estudio,Antioquia,Medellín,28,M,25/03/2020
+464,S,Relacionado,Antioquia,Medellín,34,M,25/03/2020
+463,I,Importado,Barranquilla D.E.,Barranquilla,19,F,25/03/2020
+462,S,Relacionado,Antioquia,Frontino,15,M,25/03/2020
+461,S,Relacionado,Norte de Santander,Cúcuta,44,F,25/03/2020
+460,S,En estudio,Quindío,Armenia,72,M,25/03/2020
+459,S,Relacionado,Cauca,Popayán,26,M,25/03/2020
+458,S,Relacionado,Cauca,Popayán,45,F,25/03/2020
+457,I,Importado,Meta,Villavicencio,29,M,25/03/2020
+456,S,Relacionado,Valle del Cauca,Palmira,58,M,25/03/2020
+455,I,Importado,Valle del Cauca,Cali,35,F,25/03/2020
+454,I,Importado,Bogotá D.C.,Bogotá,50,F,25/03/2020
+453,I,Importado,Caldas,Manizales,26,F,25/03/2020
+452,I,Importado,Antioquia,Bello,32,F,25/03/2020
+451,I,Importado,Santander,Bucaramanga,33,F,25/03/2020
+450,S,Relacionado,Antioquia,Medellín,24,F,25/03/2020
+449,S,Relacionado,Cauca,Popayán,48,M,25/03/2020
+448,S,Relacionado,Bogotá D.C.,Bogotá,40,M,25/03/2020
+447,S,Relacionado,Cundinamarca,Cota,52,M,25/03/2020
+446,S,Relacionado,Bogotá D.C.,Bogotá,35,F,25/03/2020
+445,S,Relacionado,Boyacá,Santana,57,F,25/03/2020
+444,I,Importado,Antioquia,Medellín,37,M,25/03/2020
+443,S,Relacionado,Bogotá D.C.,Bogotá,34,F,25/03/2020
+442,S,Relacionado,Bogotá D.C.,Bogotá,55,F,25/03/2020
+441,S,Relacionado,Bogotá D.C.,Bogotá,43,F,25/03/2020
+440,S,Relacionado,Norte de Santander,Cúcuta,73,F,25/03/2020
+439,S,Relacionado,Caldas,La Dorada,28,M,25/03/2020
+438,S,Relacionado,Antioquia,Medellín,36,F,25/03/2020
+437,S,Relacionado,Norte de Santander,Cúcuta,28,F,25/03/2020
+436,S,Relacionado,Cartagena D.T. y C,Cartagena,38,F,25/03/2020
+435,S,Relacionado,Quindío,Armenia,19,M,25/03/2020
+434,I,Importado,Barranquilla D.E.,Barranquilla,25,M,25/03/2020
+433,S,Relacionado,Quindío,Armenia,33,M,25/03/2020
+432,S,Relacionado,Valle del Cauca,Palmira,9,M,25/03/2020
+431,S,Relacionado,Quindío,Armenia,50,F,25/03/2020
+430,S,Relacionado,Cartagena D.T. y C,Cartagena,38,M,25/03/2020
+429,I,Importado,Valle del Cauca,El Dovio,48,M,25/03/2020
+428,I,Importado,Tolima,Ibagué,44,M,25/03/2020
+427,S,Relacionado,Cartagena D.T. y C,Cartagena,54,M,25/03/2020
+426,S,Relacionado,Cartagena D.T. y C,Cartagena,41,F,25/03/2020
+425,S,Relacionado,Valle del Cauca,Cali,80,F,25/03/2020
+424,I,Importado,Risaralda,Pereira,64,M,25/03/2020
+423,S,Relacionado,Risaralda,Pereira,28,F,25/03/2020
+422,S,Relacionado,Cartagena D.T. y C,Cartagena,50,F,25/03/2020
+421,S,En estudio,Atlántico,Soledad,21,F,25/03/2020
+420,S,En estudio,Santa Marta D.T. y C.,Santa Marta,58,M,25/03/2020
+419,S,En estudio,Bogotá D.C.,Bogotá,35,M,24/03/2020
+418,S,En estudio,Bogotá D.C.,Bogotá,69,F,24/03/2020
+417,S,Relacionado,Bogotá D.C.,Bogotá,52,F,24/03/2020
+416,I,Importado,Bogotá D.C.,Bogotá,35,M,24/03/2020
+415,S,En estudio,Bogotá D.C.,Bogotá,62,M,24/03/2020
+414,I,Importado,Bogotá D.C.,Bogotá,48,M,24/03/2020
+413,S,Relacionado,Bogotá D.C.,Bogotá,63,M,24/03/2020
+412,S,En estudio,Bogotá D.C.,Bogotá,57,F,24/03/2020
+411,I,Importado,Bogotá D.C.,Bogotá,23,F,24/03/2020
+410,I,Importado,Bogotá D.C.,Bogotá,33,F,24/03/2020
+409,S,Relacionado,Bogotá D.C.,Bogotá,43,F,24/03/2020
+408,I,Importado,Bogotá D.C.,Bogotá,45,M,24/03/2020
+407,I,Importado,Bogotá D.C.,Bogotá,25,F,24/03/2020
+406,I,Importado,Bogotá D.C.,Bogotá,25,M,24/03/2020
+405,S,Relacionado,Bogotá D.C.,Bogotá,39,M,24/03/2020
+404,I,Importado,Bogotá D.C.,Bogotá,58,M,24/03/2020
+403,I,Importado,Bogotá D.C.,Bogotá,21,M,24/03/2020
+402,I,Importado,Bogotá D.C.,Bogotá,70,F,24/03/2020
+401,I,Importado,Bogotá D.C.,Bogotá,30,F,24/03/2020
+400,I,Importado,Bogotá D.C.,Bogotá,60,F,24/03/2020
+399,I,Importado,Bogotá D.C.,Bogotá,21,M,24/03/2020
+398,S,Relacionado,Bogotá D.C.,Bogotá,51,F,24/03/2020
+397,S,Relacionado,Bogotá D.C.,Bogotá,27,F,24/03/2020
+396,I,Importado,Bogotá D.C.,Bogotá,44,F,24/03/2020
+395,S,Relacionado,Bogotá D.C.,Bogotá,45,M,24/03/2020
+394,I,Importado,Bogotá D.C.,Bogotá,66,M,24/03/2020
+393,I,Importado,Bogotá D.C.,Bogotá,34,M,24/03/2020
+392,I,Importado,Bogotá D.C.,Bogotá,45,F,24/03/2020
+391,S,Relacionado,Bogotá D.C.,Bogotá,48,M,24/03/2020
+390,S,Relacionado,Bogotá D.C.,Bogotá,74,F,24/03/2020
+389,S,Relacionado,Bogotá D.C.,Bogotá,73,M,24/03/2020
+388,I,Importado,Bogotá D.C.,Bogotá,29,M,24/03/2020
+387,S,En estudio,Bogotá D.C.,Bogotá,43,F,24/03/2020
+386,I,Importado,Bogotá D.C.,Bogotá,59,M,24/03/2020
+385,I,Importado,Bogotá D.C.,Bogotá,51,M,24/03/2020
+384,S,Relacionado,Bogotá D.C.,Bogotá,63,M,24/03/2020
+383,I,Importado,Bogotá D.C.,Bogotá,61,M,24/03/2020
+382,I,Importado,Bogotá D.C.,Bogotá,58,F,24/03/2020
+381,I,Importado,Bogotá D.C.,Bogotá,48,F,24/03/2020
+380,S,Relacionado,Bogotá D.C.,Bogotá,34,F,24/03/2020
+379,S,Relacionado,Bogotá D.C.,Bogotá,23,F,24/03/2020
+378,I,Importado,Valle del Cauca,Tuluá,45,M,24/03/2020
+377,I,Importado,Valle del Cauca,Tuluá,52,M,24/03/2020
+376,S,Relacionado,Cauca,Popayán,48,F,24/03/2020
+375,S,Relacionado,Valle del Cauca,Cali,28,M,24/03/2020
+374,S,Relacionado,Valle del Cauca,Cali,29,M,24/03/2020
+373,I,Importado,Cartagena D.T. y C,Cartagena,39,M,24/03/2020
+372,I,Importado,Caldas,Manizales,70,M,24/03/2020
+371,S,Relacionado,Santa Marta D.T. y C.,Santa Marta,83,F,24/03/2020
+370,S,Relacionado,Cundinamarca,Funza,61,F,24/03/2020
+369,I,Importado,Valle del Cauca,Darién,41,M,24/03/2020
+368,I,Importado,Quindío,Armenia,34,F,24/03/2020
+367,S,Relacionado,Valle del Cauca,Cali,28,F,24/03/2020
+366,S,Relacionado,Valle del Cauca,Cali,34,M,24/03/2020
+365,I,Importado,Valle del Cauca,Cali,64,M,24/03/2020
+364,S,Relacionado,Valle del Cauca,Cali,21,F,24/03/2020
+363,I,Importado,Valle del Cauca,Cali,23,M,24/03/2020
+362,I,Importado,Valle del Cauca,Cali,46,M,24/03/2020
+361,I,Importado,Meta,Villavicencio,80,F,24/03/2020
+360,S,Relacionado,Valle del Cauca,Cali,33,M,24/03/2020
+359,S,Relacionado,Huila,Neiva,42,F,24/03/2020
+358,I,Importado,Valle del Cauca,Cali,58,F,24/03/2020
+357,S,Relacionado,Valle del Cauca,Cali,42,M,24/03/2020
+356,I,Importado,Cundinamarca,Anapoima,32,M,24/03/2020
+355,I,Importado,Cundinamarca,Villeta,44,F,24/03/2020
+354,S,Relacionado,Valle del Cauca,San Pedro,29,F,24/03/2020
+353,I,Importado,Huila,Palermo,41,M,24/03/2020
+352,I,Importado,Cundinamarca,Villeta,33,M,24/03/2020
+351,S,Relacionado,Cundinamarca,La Calera,58,M,24/03/2020
+350,I,Importado,Cundinamarca,Fusagasugá,54,M,24/03/2020
+349,S,Relacionado,Valle del Cauca,Cali,33,F,24/03/2020
+348,S,Relacionado,Valle del Cauca,Cali,36,F,24/03/2020
+347,I,Importado,Meta,Villavicencio,43,F,24/03/2020
+346,S,Relacionado,Valle del Cauca,Cali,87,M,24/03/2020
+345,S,Relacionado,Valle del Cauca,Cali,53,F,24/03/2020
+344,S,Relacionado,Valle del Cauca,Cali,56,M,24/03/2020
+343,I,Importado,Valle del Cauca,Cali,26,F,24/03/2020
+342,S,Relacionado,Valle del Cauca,Cali,47,F,24/03/2020
+341,S,Relacionado,Huila,Neiva,68,M,24/03/2020
+340,S,Relacionado,Cartagena D.T. y C,Cartagena,36,M,24/03/2020
+339,I,Importado,Valle del Cauca,Cartago,34,F,24/03/2020
+338,I,Importado,Valle del Cauca,La Unión,56,F,24/03/2020
+337,S,Relacionado,Valle del Cauca,Cali,22,M,24/03/2020
+336,S,Relacionado,Cartagena D.T. y C,Cartagena,24,M,24/03/2020
+335,S,Relacionado,Valle del Cauca,Cali,59,M,24/03/2020
+334,S,Relacionado,Valle del Cauca,Cali,23,M,24/03/2020
+333,I,Importado,Risaralda,Pereira,79,M,24/03/2020
+332,I,Importado,Valle del Cauca,Cali,38,F,24/03/2020
+331,I,Importado,Valle del Cauca,Cali,37,M,24/03/2020
+330,I,Importado,Cartagena D.T. y C,Cartagena,42,M,24/03/2020
+329,I,Importado,Cartagena D.T. y C,Cartagena,51,F,24/03/2020
+328,S,Relacionado,Cesar,Valledupar,33,M,24/03/2020
+327,S,Relacionado,Risaralda,Pereira,32,F,24/03/2020
+326,S,Relacionado,Risaralda,Pereira,61,M,24/03/2020
+325,I,Importado,Barranquilla D.E.,Barranquilla,19,F,24/03/2020
+324,I,Importado,Barranquilla D.E.,Barranquilla,57,M,24/03/2020
+323,S,Relacionado,Caldas,Viterbo,15,F,24/03/2020
+322,I,Importado,Tolima,Ibagué,55,F,24/03/2020
+321,I,Importado,Tolima,Ibagué,23,F,24/03/2020
+320,I,Importado,Tolima,Ibagué,56,M,24/03/2020
+319,I,Importado,Tolima,Ibagué,62,F,24/03/2020
+318,S,Relacionado,Norte de Santander,Cúcuta,78,M,24/03/2020
+317,S,Relacionado,Cundinamarca,Mosquera,37,M,24/03/2020
+316,I,Importado,Norte de Santander,Cúcuta,18,M,24/03/2020
+315,I,Importado,Norte de Santander,Cúcuta,49,M,24/03/2020
+314,I,Importado,Nariño,Ipiales,62,M,24/03/2020
+313,S,En estudio,Bogotá D.C.,Bogotá,48,F,24/03/2020
+312,S,En estudio,Bogotá D.C.,Bogotá,18,F,24/03/2020
+311,S,En estudio,Bogotá D.C.,Bogotá,40,F,24/03/2020
+310,I,Importado,Bogotá D.C.,Bogotá,28,F,24/03/2020
+309,I,Importado,Bogotá D.C.,Bogotá,59,M,24/03/2020
+308,S,En estudio,Bogotá D.C.,Bogotá,21,F,24/03/2020
+307,I,Importado,Bogotá D.C.,Bogotá,31,M,24/03/2020
+306,I,Importado,Antioquia,Rionegro,29,M,23/03/2020
+305,I,Importado,Meta,Villavicencio,29,M,23/03/2020
+304,I,Importado,Antioquia,Bello,30,M,23/03/2020
+303,I,Importado,Antioquia,Itagüí,74,F,23/03/2020
+302,I,Importado,Meta,Villavicencio,33,F,23/03/2020
+301,I,Importado,Antioquia,Apartado,29,F,23/03/2020
+300,I,Importado,Antioquia,Medellín,29,F,23/03/2020
+299,I,Importado,Meta,Villavicencio,60,F,23/03/2020
+298,I,Importado,Meta,Villavicencio,58,M,23/03/2020
+297,I,Importado,Antioquia,Envigado,20,M,23/03/2020
+296,I,Importado,Antioquia,Medellín,25,F,23/03/2020
+295,S,Relacionado,Antioquia,Medellín,42,M,23/03/2020
+294,I,Importado,Antioquia,Medellín,30,F,23/03/2020
+293,I,Importado,Antioquia,Medellín,30,F,23/03/2020
+292,I,Importado,Antioquia,Medellín,43,F,23/03/2020
+291,I,Importado,Antioquia,El Retiro,23,F,23/03/2020
+290,S,Relacionado,Santa Marta D.T. y C.,Santa Marta,63,F,23/03/2020
+289,S,Relacionado,Risaralda,Dosquebradas,49,F,23/03/2020
+288,I,Importado,Cundinamarca,Pacho,29,M,23/03/2020
+287,S,En estudio,Cundinamarca,Soacha,25,M,23/03/2020
+286,S,Relacionado,Huila,Neiva,83,F,23/03/2020
+285,S,Relacionado,Valle del Cauca,Palmira,42,F,23/03/2020
+284,I,Importado,Valle del Cauca,Cali,65,F,23/03/2020
+283,S,Relacionado,Valle del Cauca,Cali,56,M,23/03/2020
+282,I,Importado,Valle del Cauca,Cali,40,M,23/03/2020
+281,I,Importado,Valle del Cauca,Trujillo,51,M,23/03/2020
+280,I,Importado,Valle del Cauca,Palmira,63,F,23/03/2020
+279,I,Importado,Caldas,Villamaría,29,M,23/03/2020
+278,I,Importado,Quindío,Armenia,64,M,23/03/2020
+277,I,Importado,Antioquia,Sabaneta,36,F,23/03/2020
+276,I,Importado,Cundinamarca,Cota,52,M,23/03/2020
+275,I,Importado,Antioquia,Barbosa,21,F,23/03/2020
+274,I,Importado,Antioquia,Medellín,30,M,23/03/2020
+273,I,Importado,Antioquia,Medellín,87,M,23/03/2020
+272,I,Importado,Antioquia,Medellín,47,F,23/03/2020
+271,I,Importado,Antioquia,Medellín,21,F,23/03/2020
+270,S,Relacionado,Cartagena D.T. y C,Cartagena,58,F,23/03/2020
+269,S,Relacionado,Cundinamarca,Chía,56,M,23/03/2020
+268,I,Importado,Antioquia,Medellín,37,F,23/03/2020
+267,I,Importado,Antioquia,Medellín,21,M,23/03/2020
+266,S,Relacionado,Cartagena D.T. y C,Cartagena,84,F,23/03/2020
+265,I,Importado,Cundinamarca,Cajicá,54,M,23/03/2020
+264,I,Importado,Antioquia,Envigado,39,F,23/03/2020
+263,I,Importado,Antioquia,Medellín,59,M,23/03/2020
+262,I,Importado,Bogotá D.C.,Bogotá,39,M,23/03/2020
+261,S,Relacionado,Bogotá D.C.,Bogotá,61,M,23/03/2020
+260,I,Importado,Bogotá D.C.,Bogotá,41,M,23/03/2020
+259,I,Importado,Bogotá D.C.,Bogotá,35,M,23/03/2020
+258,I,Importado,Bogotá D.C.,Bogotá,26,M,23/03/2020
+127,S,Relacionado,Barranquilla D.E.,Barranquilla,30,F,19/03/2020
+126,I,Importado,Barranquilla D.E.,Barranquilla,52,F,19/03/2020
+125,I,Importado,Cartagena D.T. y C,Cartagena,47,M,19/03/2020
+124,S,Relacionado,Huila,Neiva,76,F,19/03/2020
+123,I,Importado,Caldas,Viterbo,38,F,19/03/2020
+122,I,Importado,Cauca,Popayán,32,F,19/03/2020
+121,I,Importado,Cauca,Popayán,61,M,19/03/2020
+120,S,Relacionado,Quindío,Armenia,23,F,19/03/2020
+119,S,Relacionado,Norte de Santander,Cúcuta,24,M,19/03/2020
+118,S,Relacionado,Norte de Santander,Cúcuta,50,M,19/03/2020
+117,I,Importado,Norte de Santander,Cúcuta,28,M,19/03/2020
+116,S,Relacionado,Bogotá D.C.,Bogotá,40,F,19/03/2020
+115,I,Importado,Bogotá D.C.,Bogotá,29,M,19/03/2020
+114,I,Importado,Bogotá D.C.,Bogotá,49,M,19/03/2020
+113,I,Importado,Bogotá D.C.,Bogotá,33,M,19/03/2020
+112,I,Importado,Bogotá D.C.,Bogotá,30,M,19/03/2020
+111,S,Relacionado,Bogotá D.C.,Bogotá,60,M,19/03/2020
+110,I,Importado,Bogotá D.C.,Bogotá,62,F,19/03/2020
+109,I,Importado,Bogotá D.C.,Bogotá,54,M,19/03/2020
+108,I,Importado,Antioquia,Medellín,57,F,19/03/2020
+107,I,Importado,Antioquia,Medellín,56,M,19/03/2020
+106,I,Importado,Antioquia,Medellín,44,M,19/03/2020
+105,I,Importado,Valle del Cauca,Palmira,23,F,19/03/2020
+104,I,Importado,Barranquilla D.E.,Barranquilla,48,F,19/03/2020
+103,I,Importado,Cartagena D.T. y C,Cartagena,24,F,19/03/2020
+102,I,Importado,Risaralda,Pereira,79,M,18/03/2020
+101,I,Importado,Risaralda,Dosquebradas,18,M,18/03/2020
+100,I,Importado,Risaralda,Pereira,21,M,18/03/2020
+99,S,Relacionado,Tolima,Ibagué,16,M,18/03/2020
+98,I,Importado,Cartagena D.T. y C,Cartagena,21,M,18/03/2020
+97,I,Importado,Cartagena D.T. y C,Cartagena,24,M,18/03/2020
+96,I,Importado,Bogotá D.C.,Bogotá,37,F,18/03/2020
+95,I,Importado,Bogotá D.C.,Bogotá,69,M,18/03/2020
+94,I,Importado,Bogotá D.C.,Bogotá,53,M,18/03/2020
+93,I,Importado,Bogotá D.C.,Bogotá,26,F,18/03/2020
+92,S,Relacionado,Bogotá D.C.,Bogotá,50,M,18/03/2020
+91,I,Importado,Cundinamarca,Cajicá,32,M,18/03/2020
+90,S,Relacionado,Huila,Neiva,53,F,18/03/2020
+89,I,Importado,Santander,Bucaramanga,39,F,18/03/2020
+88,S,Relacionado,Tolima,Ibagué,36,M,18/03/2020
+87,I,Importado,Cundinamarca,Cajicá,45,M,18/03/2020
+86,I,Importado,Risaralda,Pereira,29,M,18/03/2020
+85,S,Relacionado,Valle del Cauca,Cali,42,F,18/03/2020
+84,I,Importado,Valle del Cauca,Cali,51,M,18/03/2020
+83,I,Importado,Valle del Cauca,Cali,56,M,18/03/2020
+82,I,Importado,Valle del Cauca,Cali,54,M,18/03/2020
+81,I,Importado,Valle del Cauca,Cali,49,F,18/03/2020
+80,S,Relacionado,Valle del Cauca,Palmira,53,F,18/03/2020
+79,S,Relacionado,Valle del Cauca,Palmira,9,M,18/03/2020
+78,S,Relacionado,Valle del Cauca,Palmira,39,F,18/03/2020
+77,I,Importado,Quindío,Armenia,18,M,18/03/2020
+76,I,Importado,Quindío,Armenia,46,F,18/03/2020
+75,S,Relacionado,Bogotá D.C.,Bogotá,49,F,17/03/2020
+74,S,Relacionado,Bogotá D.C.,Bogotá,18,M,17/03/2020
+73,S,Relacionado,Cartagena D.T. y C,Cartagena,54,F,17/03/2020
+72,S,Relacionado,Norte de Santander,Cúcuta,22,F,17/03/2020
+71,S,Relacionado,Norte de Santander,Cúcuta,54,M,17/03/2020
+70,I,Importado,Bogotá D.C.,Bogotá,37,F,17/03/2020
+69,I,Importado,Bogotá D.C.,Bogotá,22,F,17/03/2020
+68,I,Importado,Bogotá D.C.,Bogotá,72,M,17/03/2020
+67,I,Importado,Bogotá D.C.,Bogotá,21,M,17/03/2020
+66,I,Importado,Bogotá D.C.,Bogotá,40,F,17/03/2020
+65,S,Relacionado,Bogotá D.C.,Bogotá,64,M,17/03/2020
+64,I,Importado,Bogotá D.C.,Bogotá,31,M,17/03/2020
+63,I,Importado,Valle del Cauca,Cali,26,F,17/03/2020
+62,I,Importado,Valle del Cauca,Cali,32,M,17/03/2020
+61,I,Importado,Barranquilla D.E.,Barranquilla,21,M,17/03/2020
+60,I,Importado,Santander,Bucaramanga,24,M,17/03/2020
+29,S,Relacionado,Huila,Neiva,55,F,15/03/2020
+28,I,Importado,Risaralda,Dosquebradas,22,M,15/03/2020
+27,S,Relacionado,Cartagena D.T. y C,Cartagena,30,F,15/03/2020
+26,S,Relacionado,Cartagena D.T. y C,Cartagena,30,F,15/03/2020
+25,I,Importado,Valle del Cauca,Cali,49,M,15/03/2020
+24,I,Importado,Bogotá D.C.,Bogotá,18,F,14/03/2020
+23,S,Relacionado,Bogotá D.C.,Bogotá,23,M,14/03/2020
+22,I,Importado,Antioquia,Rionegro,36,M,14/03/2020
+21,S,Relacionado,Antioquia,Medellín,28,M,14/03/2020
+20,S,Relacionado,Antioquia,Medellín,26,F,14/03/2020
+19,S,Relacionado,Bogotá D.C.,Bogotá,54,F,14/03/2020
+18,I,Importado,Bogotá D.C.,Bogotá,54,M,14/03/2020
+17,I,Importado,Bogotá D.C.,Bogotá,73,F,14/03/2020
+16,I,Importado,Bogotá D.C.,Bogotá,61,F,13/03/2020
+15,I,Importado,Meta,Villavicencio,30,F,13/03/2020
+14,I,Importado,Valle del Cauca,Palmira,48,M,13/03/2020
+1,I,Importado,Bogotá D.C.,Bogotá,19,F,06/03/2020
+2,I,Importado,Valle del Cauca,Buga,34,M,09/03/2020
+3,I,Importado,Antioquia,Medellín,50,F,09/03/2020
+4,S,Relacionado,Antioquia,Medellín,55,M,11/03/2020
+5,S,Relacionado,Antioquia,Medellín,25,M,11/03/2020
+6,S,Relacionado,Antioquia,Itagüí,27,F,11/03/2020
+7,I,Importado,Cartagena D.T. y C,Cartagena,85,F,11/03/2020
+8,I,Importado,Bogotá D.C.,Bogotá,22,F,11/03/2020
+9,I,Importado,Bogotá D.C.,Bogotá,28,F,11/03/2020
+10,I,Importado,Bogotá D.C.,Bogotá,36,F,12/03/2020
+11,I,Importado,Bogotá D.C.,Bogotá,42,F,12/03/2020
+12,I,Importado,Huila,Neiva,74,F,12/03/2020
+13,S,Relacionado,Huila,Neiva,68,F,12/03/2020
+30,I,Importado,Norte de Santander,Cúcuta,48,F,15/03/2020
+31,I,Importado,Caldas,Manizales,65,M,15/03/2020
+32,I,Importado,Antioquia,Medellín,55,M,15/03/2020
+33,I,Importado,Bogotá D.C.,Bogotá,59,M,15/03/2020
+34,I,Importado,Bogotá D.C.,Bogotá,23,F,15/03/2020
+35,I,Importado,Bogotá D.C.,Bogotá,54,M,15/03/2020
+36,I,Importado,Bogotá D.C.,Bogotá,72,M,15/03/2020
+37,S,Relacionado,Bogotá D.C.,Bogotá,45,F,15/03/2020
+38,I,Importado,Bogotá D.C.,Bogotá,29,M,15/03/2020
+39,I,Importado,Bogotá D.C.,Bogotá,21,M,15/03/2020
+40,I,Importado,Bogotá D.C.,Bogotá,23,F,15/03/2020
+41,S,Relacionado,Huila,Neiva,79,M,15/03/2020
+42,S,Relacionado,Huila,Neiva,52,F,15/03/2020
+43,S,Relacionado,Huila,Neiva,71,M,15/03/2020
+44,S,Relacionado,Huila,Neiva,24,F,15/03/2020
+45,I,Importado,Cundinamarca,Subachoque,29,M,15/03/2020
+46,S,Relacionado,Bogotá D.C.,Bogotá,44,F,16/03/2020
+47,S,Relacionado,Bogotá D.C.,Bogotá,38,M,16/03/2020
+48,S,Relacionado,Bogotá D.C.,Bogotá,31,M,16/03/2020
+49,I,Importado,Bogotá D.C.,Bogotá,41,F,16/03/2020
+50,I,Importado,Bogotá D.C.,Bogotá,67,F,16/03/2020
+51,I,Importado,Cundinamarca,Soacha,24,M,16/03/2020
+52,I,Importado,Bogotá D.C.,Bogotá,29,M,16/03/2020
+53,I,Importado,Bogotá D.C.,Bogotá,62,M,16/03/2020
+54,I,Importado,Bogotá D.C.,Bogotá,42,F,16/03/2020
+55,S,Relacionado,Bogotá D.C.,Bogotá,58,F,16/03/2020
+56,I,Importado,Bogotá D.C.,Bogotá,34,M,16/03/2020
+57,S,Relacionado,Bogotá D.C.,Bogotá,37,M,16/03/2020
+58,S,Relacionado,Cartagena D.T. y C,Cartagena,27,M,17/03/2020
+59,I,Importado,Barranquilla D.E.,Barranquilla,20,M,17/03/2020
+128,S,Relacionado,Cundinamarca,Soacha,58,M,19/03/2020
+129,I,Importado,Risaralda,Pereira,26,F,20/03/2020
+130,I,Importado,Cundinamarca,Anapoima,53,M,20/03/2020
+131,I,Importado,Antioquia,Medellín,22,F,20/03/2020
+132,S,Relacionado,Valle del Cauca,Cali,33,M,20/03/2020
+133,S,Relacionado,Antioquia,Rionegro,51,M,20/03/2020
+134,S,Relacionado,Antioquia,Medellín,28,M,20/03/2020
+135,I,Importado,Antioquia,Medellín,44,F,20/03/2020
+136,S,Relacionado,Antioquia,Medellín,37,M,20/03/2020
+137,I,Importado,Antioquia,Medellín,54,M,20/03/2020
+138,I,Importado,Bogotá D.C.,Bogotá,54,M,20/03/2020
+139,I,Importado,Bogotá D.C.,Bogotá,30,M,20/03/2020
+140,I,Importado,Bogotá D.C.,Bogotá,34,M,20/03/2020
+141,I,Importado,Antioquia,Medellín,62,F,20/03/2020
+142,I,Importado,Antioquia,Medellín,35,F,20/03/2020
+143,I,Importado,Antioquia,Envigado,46,M,20/03/2020
+144,I,Importado,Antioquia,Medellín,41,M,20/03/2020
+145,S,Relacionado,Antioquia,Medellín,18,F,20/03/2020
+146,S,Relacionado,Bogotá D.C.,Bogotá,31,F,20/03/2020
+147,S,Relacionado,Bogotá D.C.,Bogotá,25,F,20/03/2020
+148,S,Relacionado,Bogotá D.C.,Bogotá,32,M,20/03/2020
+149,I,Importado,Bogotá D.C.,Bogotá,37,M,20/03/2020
+150,I,Importado,Bogotá D.C.,Bogotá,29,F,20/03/2020
+151,I,Importado,Bogotá D.C.,Bogotá,47,M,20/03/2020
+152,I,Importado,Bogotá D.C.,Bogotá,65,M,20/03/2020
+153,S,Relacionado,Bogotá D.C.,Bogotá,53,F,20/03/2020
+154,I,Importado,Bogotá D.C.,Bogotá,40,M,20/03/2020
+155,I,Importado,Santa Marta D.T. y C.,Santa Marta,20,M,20/03/2020
+156,I,Importado,Cundinamarca,Chía,28,F,20/03/2020
+157,S,Relacionado,Santa Marta D.T. y C.,Santa Marta,88,M,20/03/2020
+158,S,Relacionado,Cundinamarca,Madrid,32,M,20/03/2020
+159,I,Importado,Bogotá D.C.,Bogotá,34,M,20/03/2020
+160,I,Importado,Bogotá D.C.,Bogotá,42,F,20/03/2020
+161,I,Importado,Bogotá D.C.,Bogotá,22,F,20/03/2020
+162,I,Importado,Bogotá D.C.,Bogotá,25,M,20/03/2020
+163,S,Relacionado,Bogotá D.C.,Bogotá,28,M,20/03/2020
+164,I,Importado,Bogotá D.C.,Bogotá,67,F,20/03/2020
+165,S,Relacionado,Bogotá D.C.,Bogotá,32,F,20/03/2020
+166,S,Relacionado,Bogotá D.C.,Bogotá,45,F,20/03/2020
+167,S,Relacionado,Bogotá D.C.,Bogotá,46,F,20/03/2020
+168,I,Importado,Bogotá D.C.,Bogotá,25,F,20/03/2020
+169,S,Relacionado,Bogotá D.C.,Bogotá,42,F,20/03/2020
+170,I,Importado,Bogotá D.C.,Bogotá,45,F,20/03/2020
+171,S,Relacionado,Bogotá D.C.,Bogotá,21,F,20/03/2020
+172,S,Relacionado,Bogotá D.C.,Bogotá,27,M,20/03/2020
+173,I,Importado,Bogotá D.C.,Bogotá,65,F,20/03/2020
+174,I,Importado,Bogotá D.C.,Bogotá,70,M,20/03/2020
+175,I,Importado,Bogotá D.C.,Bogotá,23,F,20/03/2020
+176,I,Importado,Tolima,Ibagué,26,F,21/03/2020
+177,S,Relacionado,Cartagena D.T. y C,Cartagena,28,M,21/03/2020
+178,I,Importado,Cartagena D.T. y C,Cartagena,28,M,21/03/2020
+179,S,Relacionado,Cartagena D.T. y C,Cartagena,44,F,21/03/2020
+180,I,Importado,Norte de Santander,Villa del Rosario,23,M,21/03/2020
+181,I,Importado,Caldas,Manizales,22,F,21/03/2020
+182,S,Relacionado,Norte de Santander,Cúcuta,44,F,21/03/2020
+183,I,Importado,Valle del Cauca,Cali,48,F,21/03/2020
+184,I,Importado,Risaralda,Pereira,41,F,21/03/2020
+185,S,Relacionado,Valle del Cauca,Palmira,58,F,21/03/2020
+186,I,Importado,Valle del Cauca,Palmira,50,F,21/03/2020
+187,S,Relacionado,Valle del Cauca,Cali,74,M,21/03/2020
+188,S,Relacionado,Valle del Cauca,Cali,70,F,21/03/2020
+189,I,Importado,Valle del Cauca,Cali,81,F,21/03/2020
+190,I,Importado,Valle del Cauca,Cali,28,M,21/03/2020
+191,I,Importado,Valle del Cauca,Palmira,17,M,21/03/2020
+192,S,Relacionado,Valle del Cauca,Cali,30,F,21/03/2020
+193,I,Importado,Valle del Cauca,Cali,53,F,21/03/2020
+194,I,Importado,Valle del Cauca,Palmira,63,F,21/03/2020
+195,I,Importado,Risaralda,Pereira,65,F,21/03/2020
+196,I,Importado,Huila,Neiva,50,F,21/03/2020
+197,S,Relacionado,Cartagena D.T. y C,Cartagena,58,M,21/03/2020
+198,I,Importado,Antioquia,Medellín,39,M,21/03/2020
+199,I,Importado,Antioquia,Guarne,28,M,21/03/2020
+200,S,Relacionado,Cartagena D.T. y C,Cartagena,53,F,21/03/2020
+201,I,Importado,Cundinamarca,Chía,50,F,21/03/2020
+202,I,Importado,Antioquia,Bello,26,M,21/03/2020
+203,I,Importado,Barranquilla D.E.,Barranquilla,24,F,21/03/2020
+204,I,Importado,Barranquilla D.E.,Barranquilla,35,M,21/03/2020
+205,S,Relacionado,Bogotá D.C.,Bogotá,28,M,21/03/2020
+206,I,Importado,Bogotá D.C.,Bogotá,60,F,21/03/2020
+207,I,Importado,Bogotá D.C.,Bogotá,41,M,21/03/2020
+208,I,Importado,Bogotá D.C.,Bogotá,62,M,21/03/2020
+209,I,Importado,Bogotá D.C.,Bogotá,68,F,21/03/2020
+210,I,Importado,Bogotá D.C.,Bogotá,55,M,21/03/2020
+211,I,Importado,Quindío,Calarcá,25,M,22/03/2020
+212,S,Relacionado,Quindío,Armenia,58,F,22/03/2020
+213,I,Importado,Cesar,Valledupar,30,M,22/03/2020
+214,S,Relacionado,Risaralda,Dosquebradas,56,F,22/03/2020
+215,I,Importado,Risaralda,Dosquebradas,57,F,22/03/2020
+216,I,Importado,Risaralda,Dosquebradas,45,M,22/03/2020
+217,I,Importado,Risaralda,Pereira,33,M,22/03/2020
+218,S,Relacionado,Caldas,La Dorada,24,F,22/03/2020
+219,I,Importado,Caldas,Chinchiná,51,M,22/03/2020
+220,S,Relacionado,Caldas,Chinchiná,47,F,22/03/2020
+221,I,Importado,Santander,BUCARAMANGA,49,F,22/03/2020
+222,S,Relacionado,San Andrés,San Andrés,36,M,22/03/2020
+223,I,Importado,Risaralda,Pereira,73,F,22/03/2020
+224,S,Relacionado,Tolima,Ibagué,19,M,22/03/2020
+225,S,Relacionado,Valle del Cauca,Cali,22,M,22/03/2020
+226,S,Relacionado,Valle del Cauca,Yumbo,41,F,22/03/2020
+227,I,Importado,Valle del Cauca,Cali,28,M,22/03/2020
+228,I,Importado,Valle del Cauca,Cali,26,M,22/03/2020
+229,S,Relacionado,Casanare,Yopal,36,F,22/03/2020
+230,S,Relacionado,Quindío,Armenia,38,F,22/03/2020
+231,S,Relacionado,Valle del Cauca,Cali,46,F,22/03/2020
+232,S,Relacionado,Bogotá D.C.,Bogotá,59,F,22/03/2020
+233,S,Relacionado,Bogotá D.C.,Bogotá,64,M,22/03/2020
+234,S,Relacionado,Bogotá D.C.,Bogotá,41,M,22/03/2020
+235,I,Importado,Bogotá D.C.,Bogotá,47,M,22/03/2020
+236,S,Relacionado,Antioquia,Guatapé,52,M,22/03/2020
+237,I,Importado,Antioquia,Medellín,32,M,22/03/2020
+238,I,Importado,Antioquia,Medellín,61,F,22/03/2020
+239,I,Importado,Antioquia,Bello,41,M,22/03/2020
+240,I,Importado,Antioquia,Medellín,41,M,22/03/2020
+241,S,Relacionado,Bogotá D.C.,Bogotá,58,F,23/03/2020
+242,I,Importado,Bogotá D.C.,Bogotá,49,M,23/03/2020
+243,I,Importado,Bogotá D.C.,Bogotá,40,M,23/03/2020
+244,I,Importado,Bogotá D.C.,Bogotá,52,M,23/03/2020
+245,I,Importado,Bogotá D.C.,Bogotá,72,F,23/03/2020
+246,S,Relacionado,Bogotá D.C.,Bogotá,28,M,23/03/2020
+247,S,Relacionado,Bogotá D.C.,Bogotá,26,M,23/03/2020
+248,I,Importado,Bogotá D.C.,Bogotá,30,F,23/03/2020
+249,I,Importado,Bogotá D.C.,Bogotá,38,F,23/03/2020
+250,S,En estudio,Bogotá D.C.,Bogotá,76,M,23/03/2020
+251,I,Importado,Bogotá D.C.,Bogotá,55,M,23/03/2020
+252,S,Relacionado,Bogotá D.C.,Bogotá,32,F,23/03/2020
+253,S,Relacionado,Bogotá D.C.,Bogotá,34,F,23/03/2020
+254,I,Importado,Bogotá D.C.,Bogotá,45,F,23/03/2020
+255,I,Importado,Bogotá D.C.,Bogotá,19,F,23/03/2020
+256,I,Importado,Bogotá D.C.,Bogotá,57,F,23/03/2020
+257,S,Relacionado,Bogotá D.C.,Bogotá,80,M,23/03/2020
+542,I,Importado,Valle del Cauca,Cali,30,M,28/3/2020
+543,S,Relacionado,Valle del Cauca,Cali,51,M,28/3/2020
+544,S,Relacionado,Valle del Cauca,Cali,27,F,28/3/2020
+545,S,Relacionado,Valle del Cauca,Palmira,9,M,28/3/2020
+546,S,Relacionado,Valle del Cauca,Palmira,60,F,28/3/2020
+547,I,Importado,Córdoba,Sahagún,29,F,28/3/2020
+548,I,Importado,Nariño,Pasto,54,M,28/3/2020
+549,I,Importado,Cesar,Valledupar,16,F,28/3/2020
+550,S,En estudio,Atlántico,Polonuevo,16,M,28/3/2020
+551,S,En estudio,Bogotá D.C.,Bogotá,29,M,28/3/2020
+552,S,En estudio,Bogotá D.C.,Bogotá,40,M,28/3/2020
+553,I,Importado,Bogotá D.C.,Bogotá,33,M,28/3/2020
+554,S,En estudio,Bogotá D.C.,Bogotá,42,M,28/3/2020
+555,I,Importado,Bogotá D.C.,Bogotá,39,M,28/3/2020
+556,I,Importado,Bogotá D.C.,Bogotá,43,M,28/3/2020
+557,S,En estudio,Bogotá D.C.,Bogotá,82,F,28/3/2020
+558,I,Importado,Bogotá D.C.,Bogotá,41,M,28/3/2020
+559,S,En estudio,Bogotá D.C.,Bogotá,53,M,28/3/2020
+560,S,En estudio,Bogotá D.C.,Bogotá,55,F,28/3/2020
+561,S,En estudio,Bogotá D.C.,Bogotá,49,M,28/3/2020
+562,S,Relacionado,Bogotá D.C.,Bogotá,58,F,28/3/2020
+563,S,En estudio,Bogotá D.C.,Bogotá,38,F,28/3/2020
+564,S,En estudio,Bogotá D.C.,Bogotá,31,F,28/3/2020
+565,S,En estudio,Bogotá D.C.,Bogotá,64,F,28/3/2020
+566,S,En estudio,Bogotá D.C.,Bogotá,48,F,28/3/2020
+567,S,En estudio,Bogotá D.C.,Bogotá,33,F,28/3/2020
+568,S,En estudio,Bogotá D.C.,Bogotá,35,M,28/3/2020
+569,S,En estudio,Bogotá D.C.,Bogotá,57,F,28/3/2020
+570,S,En estudio,Bogotá D.C.,Bogotá,30,M,28/3/2020
+571,S,En estudio,Bogotá D.C.,Bogotá,54,M,28/3/2020
+572,S,En estudio,Bogotá D.C.,Bogotá,53,F,28/3/2020
+573,I,Importado,Bogotá D.C.,Bogotá,38,F,28/3/2020
+574,S,En estudio,Bogotá D.C.,Bogotá,30,M,28/3/2020
+575,I,Importado,Bogotá D.C.,Bogotá,38,M,28/3/2020
+576,I,Importado,Bogotá D.C.,Bogotá,31,F,28/3/2020
+577,S,En estudio,Bogotá D.C.,Bogotá,38,M,28/3/2020
+578,I,Importado,Bogotá D.C.,Bogotá,37,M,28/3/2020
+579,I,Importado,Bogotá D.C.,Bogotá,68,F,28/3/2020
+580,S,Relacionado,Bogotá D.C.,Bogotá,43,M,28/3/2020
+581,S,En estudio,Bogotá D.C.,Bogotá,26,M,28/3/2020
+582,S,En estudio,Bogotá D.C.,Bogotá,62,M,28/3/2020
+583,S,En estudio,Bogotá D.C.,Bogotá,30,M,28/3/2020
+584,I,Importado,Bogotá D.C.,Bogotá,37,M,28/3/2020
+585,S,Relacionado,Bogotá D.C.,Bogotá,33,F,28/3/2020
+586,I,Importado,Bogotá D.C.,Bogotá,67,F,28/3/2020
+587,S,En estudio,Cundinamarca,Villapinzón,67,F,28/3/2020
+588,S,Relacionado,Bogotá D.C.,Bogotá,39,M,28/3/2020
+589,I,Importado,Bogotá D.C.,Bogotá,50,F,28/3/2020
+590,I,Importado,Valle del Cauca,Cartago,58,M,28/3/2020
+591,S,Relacionado,Valle del Cauca,Cali,28,F,28/3/2020
+592,I,Importado,Valle del Cauca,Cali,72,M,28/3/2020
+593,I,Importado,Valle del Cauca,Cali,47,F,28/3/2020
+594,S,En estudio,Valle del Cauca,Cali,27,M,28/3/2020
+595,I,Importado,Antioquia,Medellín,27,F,28/3/2020
+596,I,Importado,Antioquia,Montebello,52,F,28/3/2020
+597,I,Importado,Antioquia,Medellín,21,M,28/3/2020
+598,I,Importado,Antioquia,Medellín,24,F,28/3/2020
+599,I,Importado,Antioquia,Medellín,32,F,28/3/2020
+600,S,Relacionado,Caldas,Chinchiná,25,M,28/3/2020
+601,I,Importado,Quindío,Armenia,59,M,28/3/2020
+602,I,Importado,Antioquia,Medellín,46,F,28/3/2020
+603,I,Importado,Antioquia,Santa Rosa de Osos,55,M,28/3/2020
+604,S,Relacionado,Barranquilla D.E.,Barranquilla,54,M,28/3/2020
+605,S,Relacionado,Barranquilla D.E.,Barranquilla,37,F,28/3/2020
+606,S,Relacionado,Bolívar,Turbaco,58,M,28/3/2020
+607,S,Relacionado,Cartagena D.T. y C,Cartagena,31,M,28/3/2020
+608,I,Importado,Barranquilla D.E.,Barranquilla,47,M,28/3/2020
+609,I,Importado,Antioquia,Envigado,51,F,29/3/2020
+610,S,En estudio,Antioquia,Envigado,60,M,29/3/2020
+611,I,Importado,Antioquia,Medellín,82,F,29/3/2020
+612,S,En estudio,Antioquia,Medellín,42,M,29/3/2020
+613,I,Importado,Antioquia,Bello,73,M,29/3/2020
+614,S,En estudio,Valle del Cauca,Cali,64,F,29/3/2020
+615,S,Relacionado,Valle del Cauca,Cali,46,M,29/3/2020
+616,S,Relacionado,Valle del Cauca,Cali,12,F,29/3/2020
+617,S,Relacionado,Valle del Cauca,Cali,32,M,29/3/2020
+618,S,En estudio,Valle del Cauca,Cali,62,F,29/3/2020
+619,S,En estudio,Valle del Cauca,Cali,36,M,29/3/2020
+620,I,Importado,Valle del Cauca,Palmira,45,M,29/3/2020
+621,S,Relacionado,Bogotá D.C.,Bogotá,25,M,29/3/2020
+622,I,Importado,Bogotá D.C.,Bogotá,42,F,29/3/2020
+623,I,Importado,Bogotá D.C.,Bogotá,62,F,29/3/2020
+624,S,Relacionado,Bogotá D.C.,Bogotá,38,M,29/3/2020
+625,S,Relacionado,Bogotá D.C.,Bogotá,45,F,29/3/2020
+626,S,Relacionado,Bogotá D.C.,Bogotá,45,F,29/3/2020
+627,I,Importado,Bogotá D.C.,Bogotá,45,M,29/3/2020
+628,S,Relacionado,Bogotá D.C.,Bogotá,42,F,29/3/2020
+629,S,Relacionado,Bogotá D.C.,Bogotá,42,F,29/3/2020
+630,I,Importado,Bogotá D.C.,Bogotá,62,M,29/3/2020
+631,S,Relacionado,Bogotá D.C.,Bogotá,29,M,29/3/2020
+632,S,Relacionado,Bogotá D.C.,Bogotá,70,M,29/3/2020
+633,S,Relacionado,Bogotá D.C.,Bogotá,60,F,29/3/2020
+634,I,Importado,Bogotá D.C.,Bogotá,50,F,29/3/2020
+635,S,Relacionado,Bogotá D.C.,Bogotá,29,M,29/3/2020
+636,I,Importado,Bogotá D.C.,Bogotá,69,F,29/3/2020
+637,S,Relacionado,Bogotá D.C.,Bogotá,52,M,29/3/2020
+638,I,Importado,Bogotá D.C.,Bogotá,58,F,29/3/2020
+639,S,Relacionado,Bogotá D.C.,Bogotá,46,M,29/3/2020
+640,S,En estudio,Bogotá D.C.,Bogotá,68,M,29/3/2020
+641,S,En estudio,Bogotá D.C.,Bogotá,26,F,29/3/2020
+642,S,Relacionado,Bogotá D.C.,Bogotá,38,M,29/3/2020
+643,I,Importado,Bogotá D.C.,Bogotá,25,F,29/3/2020
+644,I,Importado,Bogotá D.C.,Bogotá,22,F,29/3/2020
+645,S,En estudio,Bogotá D.C.,Bogotá,33,M,29/3/2020
+646,I,Importado,Bogotá D.C.,Bogotá,34,F,29/3/2020
+647,I,Importado,Bogotá D.C.,Bogotá,28,F,29/3/2020
+648,S,Relacionado,Bogotá D.C.,Bogotá,42,F,29/3/2020
+649,I,Importado,Bogotá D.C.,Bogotá,51,M,29/3/2020
+650,S,Relacionado,Bogotá D.C.,Bogotá,65,M,29/3/2020
+651,S,En estudio,Bogotá D.C.,Bogotá,57,M,29/3/2020
+652,S,Relacionado,Bogotá D.C.,Bogotá,34,M,29/3/2020
+653,S,Relacionado,Bogotá D.C.,Bogotá,30,M,29/3/2020
+654,I,Importado,Antioquia,Bello,33,F,29/3/2020
+655,I,Importado,Antioquia,Bello,29,M,29/3/2020
+656,S,Relacionado,Antioquia,Medellín,61,F,29/3/2020
+657,S,Relacionado,Antioquia,Medellín,8,F,29/3/2020
+658,S,Relacionado,Antioquia,Medellín,30,F,29/3/2020
+659,S,Relacionado,Huila,Neiva,26,M,29/3/2020
+660,S,Relacionado,Huila,Neiva,21,F,29/3/2020
+661,S,Relacionado,Valle del Cauca,Cali,26,M,29/3/2020
+662,I,Importado,Cesar,Valledupar,36,M,29/3/2020
+663,S,Relacionado,Cartagena D.T. y C,Cartagena,16,F,29/3/2020
+664,S,Relacionado,Cartagena D.T. y C,Cartagena,42,F,29/3/2020
+665,S,Relacionado,Cartagena D.T. y C,Cartagena,24,F,29/3/2020
+666,S,Relacionado,Cartagena D.T. y C,Cartagena,24,F,29/3/2020
+667,S,Relacionado,Cartagena D.T. y C,Cartagena,29,F,29/3/2020
+668,S,Relacionado,Barranquilla D.E.,Barranquilla,64,M,29/3/2020
+669,S,Relacionado,Sucre,Sincelejo,21,F,29/3/2020
+670,I,Importado,Caldas,Villamaría,39,F,29/3/2020
+671,S,Relacionado,Barranquilla D.E.,Barranquilla,28,F,29/3/2020
+672,S,Relacionado,Barranquilla D.E.,Barranquilla,1,M,29/3/2020
+673,S,Relacionado,Barranquilla D.E.,Barranquilla,35,M,29/3/2020
+674,S,Relacionado,Cartagena D.T. y C,Cartagena,33,F,29/3/2020
+675,I,Importado,Cartagena D.T. y C,Cartagena,41,M,29/3/2020
+676,S,En estudio,Antioquia,Rionegro,24,M,29/3/2020
+677,S,En estudio,Antioquia,Rionegro,80,M,29/3/2020
+678,S,Relacionado,Antioquia,Envigado,40,F,29/3/2020
+679,I,Importado,Antioquia,Medellín,24,F,29/3/2020
+680,S,Relacionado,Antioquia,Envigado,18,F,29/3/2020
+681,S,En estudio,Antioquia,Medellín,5,F,29/3/2020
+682,I,Importado,Antioquia,Medellín,63,F,29/3/2020
+683,S,En estudio,Antioquia,Rionegro,50,M,29/3/2020
+684,S,En estudio,Antioquia,Medellín,42,M,29/3/2020
+685,I,Importado,Santander,Bucaramanga,80,F,29/3/2020
+686,I,Importado,Santander,Bucaramanga,58,M,29/3/2020
+687,I,Importado,Santander,Bucaramanga,24,M,29/3/2020
+688,S,En estudio,Santander,Floridablanca,46,M,29/3/2020
+689,S,Relacionado,Córdoba,Lorica,35,M,29/3/2020
+690,I,Importado,Boyacá,Oicatá,72,F,29/3/2020
+691,I,Importado,Risaralda,Dosquebradas,55,F,29/3/2020
+692,S,Relacionado,Risaralda,Pereira,62,F,29/3/2020
+693,S,Relacionado,Risaralda,Pereira,6,F,29/3/2020
+694,S,Relacionado,Risaralda,Pereira,63,M,29/3/2020
+695,S,Relacionado,Risaralda,Pereira,66,F,29/3/2020
+696,S,Relacionado,Risaralda,Pereira,54,F,29/3/2020
+697,S,Relacionado,Risaralda,Pereira,61,M,29/3/2020
+698,S,Relacionado,Risaralda,Pereira,32,M,29/3/2020
+699,I,Importado,Risaralda,Dosquebradas,47,M,29/3/2020
+700,I,Importado,Risaralda,Pereira,45,F,29/3/2020
+701,S,Relacionado,Bolívar,Arjona,25,M,29/3/2020
+702,I,Importado,Bolívar,Arjona,22,F,29/3/2020
+703,S,Relacionado,Boyacá,Santana,73,F,30/3/2020
+704,I,Importado,Norte de Santander,Cúcuta,21,F,30/3/2020
+705,I,Importado,Cundinamarca,Sopó,60,M,30/3/2020
+706,I,Importado,Cundinamarca,Chía,35,M,30/3/2020
+707,S,Relacionado,Cundinamarca,Villapinzón,65,M,30/3/2020
+708,I,Importado,Cundinamarca,Soacha,54,F,30/3/2020
+709,S,Relacionado,Huila,Neiva,32,F,30/3/2020
+710,S,En estudio,Huila,Neiva,64,F,30/3/2020
+711,I,Importado,Huila,Neiva,27,F,30/3/2020
+712,S,En estudio,Huila,Palermo,45,M,30/3/2020
+713,I,Importado,Huila,Palermo,33,F,30/3/2020
+714,S,En estudio,Cartagena D.T. y C,Cartagena,44,F,30/3/2020
+715,I,Importado,Cartagena D.T. y C,Cartagena,36,F,30/3/2020
+716,S,Relacionado,Cartagena D.T. y C,Cartagena,49,F,30/3/2020
+717,S,Relacionado,Santa Marta D.T. y C.,Santa Marta,28,F,30/3/2020
+718,S,Relacionado,Caldas,La Dorada,65,F,30/3/2020
+719,I,Importado,Valle del Cauca,Cali,26,F,30/3/2020
+720,I,Importado,Valle del Cauca,Cali,31,M,30/3/2020
+721,I,Importado,Valle del Cauca,Cali,45,F,30/3/2020
+722,S,En estudio,Valle del Cauca,Cali,68,M,30/3/2020
+723,S,Relacionado,Antioquia,Medellín,24,M,30/3/2020
+724,I,Importado,Antioquia,Medellín,34,M,30/3/2020
+725,S,Relacionado,Antioquia,Medellín,37,F,30/3/2020
+726,S,En estudio,Antioquia,Medellín,36,M,30/3/2020
+727,I,Importado,Antioquia,Medellín,25,M,30/3/2020
+728,S,Relacionado,Antioquia,Itagüí,53,M,30/3/2020
+729,S,Relacionado,Antioquia,Medellín,64,M,30/3/2020
+730,S,Relacionado,Antioquia,Medellín,19,F,30/3/2020
+731,I,Importado,Antioquia,Medellín,82,M,30/3/2020
+732,S,Relacionado,Antioquia,Medellín,35,F,30/3/2020
+733,S,En estudio,Barranquilla D.E.,Barranquilla,31,M,30/3/2020
+734,S,En estudio,Bogotá D.C.,Bogotá,50,M,30/3/2020
+735,S,En estudio,Bogotá D.C.,Bogotá,48,M,30/3/2020
+736,S,En estudio,Bogotá D.C.,Bogotá,32,M,30/3/2020
+737,I,Importado,Bogotá D.C.,Bogotá,26,M,30/3/2020
+738,S,En estudio,Bogotá D.C.,Bogotá,47,F,30/3/2020
+739,I,Importado,Bogotá D.C.,Bogotá,38,M,30/3/2020
+740,S,En estudio,Bogotá D.C.,Bogotá,29,F,30/3/2020
+741,I,Importado,Bogotá D.C.,Bogotá,36,F,30/3/2020
+742,S,En estudio,Bogotá D.C.,Bogotá,38,M,30/3/2020
+743,S,En estudio,Bogotá D.C.,Bogotá,75,F,30/3/2020
+744,S,En estudio,Bogotá D.C.,Bogotá,27,M,30/3/2020
+745,I,Importado,Bogotá D.C.,Bogotá,51,F,30/3/2020
+746,S,En estudio,Bogotá D.C.,Bogotá,54,F,30/3/2020
+747,S,En estudio,Bogotá D.C.,Bogotá,52,M,30/3/2020
+748,I,Importado,Bogotá D.C.,Bogotá,23,M,30/3/2020
+749,I,Importado,Bogotá D.C.,Bogotá,50,M,30/3/2020
+750,I,Importado,Bogotá D.C.,Bogotá,61,M,30/3/2020
+751,I,Importado,Bogotá D.C.,Bogotá,61,F,30/3/2020
+752,S,En estudio,Bogotá D.C.,Bogotá,73,M,30/3/2020
+753,S,En estudio,Bogotá D.C.,Bogotá,51,F,30/3/2020
+754,S,En estudio,Bogotá D.C.,Bogotá,28,M,30/3/2020
+755,I,Importado,Bogotá D.C.,Bogotá,33,F,30/3/2020
+756,I,Importado,Bogotá D.C.,Bogotá,38,M,30/3/2020
+757,I,Importado,Bogotá D.C.,Bogotá,38,F,30/3/2020
+758,I,Importado,Bogotá D.C.,Bogotá,31,M,30/3/2020
+759,I,Importado,Bogotá D.C.,Bogotá,74,M,30/3/2020
+760,I,Importado,Bogotá D.C.,Bogotá,29,M,30/3/2020
+761,S,En estudio,Bogotá D.C.,Bogotá,51,F,30/3/2020
+762,S,En estudio,Bogotá D.C.,Bogotá,21,F,30/3/2020
+763,I,Importado,Bogotá D.C.,Bogotá,57,M,30/3/2020
+764,S,En estudio,Bogotá D.C.,Bogotá,61,F,30/3/2020
+765,S,En estudio,Bogotá D.C.,Bogotá,35,M,30/3/2020
+766,S,En estudio,Bogotá D.C.,Bogotá,30,M,30/3/2020
+767,I,Importado,Bogotá D.C.,Bogotá,31,F,30/3/2020
+768,S,En estudio,Bogotá D.C.,Bogotá,46,M,30/3/2020
+769,I,Importado,Bogotá D.C.,Bogotá,84,M,30/3/2020
+770,S,En estudio,Bogotá D.C.,Bogotá,47,F,30/3/2020
+771,I,Importado,Bogotá D.C.,Bogotá,72,F,30/3/2020
+772,I,Importado,Bogotá D.C.,Bogotá,65,M,30/3/2020
+773,I,Importado,Bogotá D.C.,Bogotá,33,F,30/3/2020
+774,I,Importado,Bogotá D.C.,Bogotá,68,F,30/3/2020
+775,S,Relacionado,Bogotá D.C.,Bogotá,51,M,30/3/2020
+776,S,Relacionado,Bogotá D.C.,Bogotá,2,M,30/3/2020
+777,S,Relacionado,Bogotá D.C.,Bogotá,47,F,30/3/2020
+778,S,En estudio,Bogotá D.C.,Bogotá,44,M,30/3/2020
+779,S,En estudio,Bogotá D.C.,Bogotá,50,M,30/3/2020
+780,S,En estudio,Bogotá D.C.,Bogotá,30,F,30/3/2020
+781,S,En estudio,Bogotá D.C.,Bogotá,27,F,30/3/2020
+782,I,Importado,Bogotá D.C.,Bogotá,35,M,30/3/2020
+783,S,En estudio,Bogotá D.C.,Bogotá,36,M,30/3/2020
+784,I,Importado,Bogotá D.C.,Bogotá,28,M,30/3/2020
+785,S,Relacionado,Bogotá D.C.,Bogotá,25,F,30/3/2020
+786,S,Relacionado,Bogotá D.C.,Bogotá,47,F,30/3/2020
+787,S,Relacionado,Bogotá D.C.,Bogotá,2,F,30/3/2020
+788,S,En estudio,Bogotá D.C.,Bogotá,64,F,30/3/2020
+789,I,Importado,Bogotá D.C.,Bogotá,51,M,30/3/2020
+790,S,En estudio,Valle del Cauca,Cali,66,M,30/3/2020
+791,S,En estudio,Valle del Cauca,Palmira,88,M,30/3/2020
+792,S,En estudio,Valle del Cauca,Cartago,26,F,30/3/2020
+793,S,En estudio,Valle del Cauca,Cali,27,M,30/3/2020
+794,I,Importado,Valle del Cauca,Palmira,55,F,30/3/2020
+795,S,Relacionado,Valle del Cauca,Palmira,17,M,30/3/2020
+796,I,Importado,Valle del Cauca,Palmira,22,M,30/3/2020
+797,S,Relacionado,Valle del Cauca,Cali,83,M,30/3/2020
+798,I,Importado,Valle del Cauca,Cartago,63,F,30/3/2020
+799,I,Importado,Valle del Cauca,Palmira,69,F,31/3/2020
+800,I,Importado,Valle del Cauca,Cartago,25,F,31/3/2020
+801,S,En estudio,Valle del Cauca,Cali,44,M,31/3/2020
+802,S,En estudio,Valle del Cauca,Cali,54,M,31/3/2020
+803,I,Importado,Valle del Cauca,Cali,20,F,31/3/2020
+804,I,Importado,Valle del Cauca,Cali,28,M,31/3/2020
+805,S,En estudio,Valle del Cauca,Cali,26,M,31/3/2020
+806,S,En estudio,Valle del Cauca,Cali,26,M,31/3/2020
+807,I,Importado,Valle del Cauca,Cali,32,M,31/3/2020
+808,I,Importado,Valle del Cauca,Cali,30,F,31/3/2020
+809,I,Importado,Valle del Cauca,Cali,38,M,31/3/2020
+810,I,Importado,Nariño,Tumaco,0,M,31/3/2020
+811,I,Importado,Nariño,Pasto,76,F,31/3/2020
+812,S,Relacionado,Cesar,Valledupar,46,M,31/3/2020
+813,S,Relacionado,Cesar,Valledupar,41,M,31/3/2020
+814,S,Relacionado,Cesar,Valledupar,38,M,31/3/2020
+815,I,Importado,Cesar,Valledupar,31,M,31/3/2020
+816,S,Relacionado,Cesar,Valledupar,27,M,31/3/2020
+817,S,Relacionado,Cesar,Valledupar,40,M,31/3/2020
+818,S,Relacionado,Cesar,Valledupar,21,M,31/3/2020
+819,I,Importado,Barranquilla D.E.,Barranquilla,26,M,31/3/2020
+820,I,Importado,La Guajira,Riohacha,42,M,31/3/2020
+821,S,En estudio,Santa Marta D.T. y C.,Santa Marta,70,M,31/3/2020
+822,S,Relacionado,Santa Marta D.T. y C.,Santa Marta,43,M,31/3/2020
+823,S,Relacionado,Barranquilla D.E.,Barranquilla,57,F,31/3/2020
+824,S,Relacionado,Barranquilla D.E.,Barranquilla,32,F,31/3/2020
+825,I,Importado,Barranquilla D.E.,Barranquilla,44,M,31/3/2020
+826,I,Importado,Barranquilla D.E.,Barranquilla,24,M,31/3/2020
+827,I,Importado,Barranquilla D.E.,Barranquilla,25,M,31/3/2020
+828,S,En estudio,Barranquilla D.E.,Barranquilla,77,M,31/3/2020
+829,S,En estudio,Barranquilla D.E.,Barranquilla,30,F,31/3/2020
+830,S,En estudio,Cartagena D.T. y C,Cartagena,55,F,31/3/2020
+831,S,Relacionado,Cartagena D.T. y C,Cartagena,30,F,31/3/2020
+832,I,Importado,Antioquia,Sabaneta,59,M,31/3/2020
+833,S,En estudio,Antioquia,Medellín,67,F,31/3/2020
+834,I,Importado,Antioquia,Medellín,66,M,31/3/2020
+835,S,Relacionado,Antioquia,Medellín,56,F,31/3/2020
+836,S,En estudio,Antioquia,Medellín,67,M,31/3/2020
+837,I,Importado,Cundinamarca,Chía,57,M,31/3/2020
+838,I,Importado,Cundinamarca,Cota,19,M,31/3/2020
+839,I,Importado,Cundinamarca,Cota,50,F,31/3/2020
+840,I,Importado,Cundinamarca,Cota,57,M,31/3/2020
+841,I,Importado,Cundinamarca,Cota,42,F,31/3/2020
+842,S,En estudio,Cundinamarca,Chía,25,F,31/3/2020
+843,S,Relacionado,Cundinamarca,Cota,50,F,31/3/2020
+844,S,En estudio,Cundinamarca,Zipaquirá,81,F,31/3/2020
+845,I,Importado,Cundinamarca,Chía,47,F,31/3/2020
+846,I,Importado,Meta,Villavicencio,31,F,31/3/2020
+847,I,Importado,Meta,Villavicencio,29,F,31/3/2020
+848,I,Importado,Meta,Villavicencio,29,F,31/3/2020
+849,S,En estudio,Norte de Santander,Cúcuta,42,M,31/3/2020
+850,S,En estudio,Norte de Santander,Puerto Santander,26,M,31/3/2020
+851,I,Importado,Norte de Santander,Cúcuta,50,F,31/3/2020
+852,I,Importado,Santander,Bucaramanga,25,M,31/3/2020
+853,I,Importado,Santander,Bucaramanga,34,M,31/3/2020
+854,I,Importado,Santander,Floridablanca,57,M,31/3/2020
+855,S,Relacionado,Huila,Neiva,36,M,31/3/2020
+856,S,Relacionado,Huila,Neiva,33,F,31/3/2020
+857,S,Relacionado,Huila,Neiva,61,F,31/3/2020
+858,S,Relacionado,Risaralda,Pereira,18,F,31/3/2020
+859,I,Importado,Risaralda,Pereira,9,M,31/3/2020
+860,I,Importado,Risaralda,Pereira,30,F,31/3/2020
+861,S,En estudio,Risaralda,Pereira,32,F,31/3/2020
+862,I,Importado,Risaralda,Pereira,32,M,31/3/2020
+863,I,Importado,Risaralda,Pereira,22,F,31/3/2020
+864,S,En estudio,Boyacá,Tunja,84,M,31/3/2020
+865,S,En estudio,Boyacá,Toguí,70,F,31/3/2020
+866,S,Relacionado,Bogotá D.C.,Bogotá,49,M,31/3/2020
+867,S,Relacionado,Bogotá D.C.,Bogotá,28,M,31/3/2020
+868,S,Relacionado,Bogotá D.C.,Bogotá,33,M,31/3/2020
+869,S,Relacionado,Bogotá D.C.,Bogotá,69,M,31/3/2020
+870,S,Relacionado,Bogotá D.C.,Bogotá,2,F,31/3/2020
+871,S,Relacionado,Bogotá D.C.,Bogotá,39,F,31/3/2020
+872,I,Importado,Bogotá D.C.,Bogotá,50,M,31/3/2020
+873,I,Importado,Bogotá D.C.,Bogotá,15,F,31/3/2020
+874,I,Importado,Bogotá D.C.,Bogotá,30,M,31/3/2020
+875,S,Relacionado,Bogotá D.C.,Bogotá,27,M,31/3/2020
+876,S,Relacionado,Bogotá D.C.,Bogotá,32,M,31/3/2020
+877,I,Importado,Bogotá D.C.,Bogotá,58,F,31/3/2020
+878,S,Relacionado,Bogotá D.C.,Bogotá,56,F,31/3/2020
+879,S,Relacionado,Bogotá D.C.,Bogotá,13,M,31/3/2020
+880,S,Relacionado,Bogotá D.C.,Bogotá,66,F,31/3/2020
+881,S,Relacionado,Bogotá D.C.,Bogotá,45,M,31/3/2020
+882,I,Importado,Bogotá D.C.,Bogotá,40,F,31/3/2020
+883,S,Relacionado,Bogotá D.C.,Bogotá,55,F,31/3/2020
+884,I,Importado,Bogotá D.C.,Bogotá,18,M,31/3/2020
+885,S,Relacionado,Bogotá D.C.,Bogotá,56,M,31/3/2020
+886,S,En estudio,Bogotá D.C.,Bogotá,65,F,31/3/2020
+887,S,Relacionado,Bogotá D.C.,Bogotá,36,M,31/3/2020
+888,S,En estudio,Bogotá D.C.,Bogotá,35,M,31/3/2020
+889,S,En estudio,Bogotá D.C.,Bogotá,31,M,31/3/2020
+890,S,En estudio,Bogotá D.C.,Bogotá,49,M,31/3/2020
+891,S,En estudio,Bogotá D.C.,Bogotá,43,F,31/3/2020
+892,S,En estudio,Bogotá D.C.,Bogotá,28,F,31/3/2020
+893,S,En estudio,Bogotá D.C.,Bogotá,32,M,31/3/2020
+894,S,En estudio,Bogotá D.C.,Bogotá,41,M,31/3/2020
+895,S,En estudio,Bogotá D.C.,Bogotá,38,F,31/3/2020
+896,S,En estudio,Bogotá D.C.,Bogotá,18,M,31/3/2020
+897,S,En estudio,Bogotá D.C.,Bogotá,35,M,31/3/2020
+898,S,En estudio,Bogotá D.C.,Bogotá,31,F,31/3/2020
+899,S,En estudio,Bogotá D.C.,Bogotá,20,F,31/3/2020
+900,S,En estudio,Bogotá D.C.,Bogotá,2,M,31/3/2020
+901,S,En estudio,Bogotá D.C.,Bogotá,37,M,31/3/2020
+902,S,En estudio,Bogotá D.C.,Bogotá,29,F,31/3/2020
+903,S,En estudio,Bogotá D.C.,Bogotá,38,M,31/3/2020
+904,S,En estudio,Bogotá D.C.,Bogotá,54,F,31/3/2020
+905,S,En estudio,Bogotá D.C.,Bogotá,30,F,31/3/2020
+906,S,En estudio,Bogotá D.C.,Bogotá,44,F,31/3/2020
+907,S,Relacionado,Quindío,Montenegro,9,F,01/04/2020
+908,S,Relacionado,Quindío,Montenegro,35,F,01/04/2020
+909,S,Relacionado,Antioquia,Medellín,51,F,01/04/2020
+910,I,Importado,Antioquia,Medellín,21,F,01/04/2020
+911,S,Relacionado,Antioquia,Medellín,29,M,01/04/2020
+912,S,Relacionado,Antioquia,Medellín,45,F,01/04/2020
+913,S,En estudio,Antioquia,Envigado,82,M,01/04/2020
+914,I,Importado,Tolima,Ibagué,48,F,01/04/2020
+915,S,Relacionado,Santander,Floridablanca,25,M,01/04/2020
+916,S,En estudio,Barranquilla D.E.,Barranquilla,61,M,01/04/2020
+917,I,Importado,Nariño,Cumbal,57,F,01/04/2020
+918,I,Importado,Nariño,Cumbal,58,M,01/04/2020
+919,I,Importado,Valle del Cauca,Cartago,16,F,01/04/2020
+920,S,En estudio,Valle del Cauca,Cali,41,M,01/04/2020
+921,I,Importado,Valle del Cauca,Ulloa,58,M,01/04/2020
+922,I,Importado,Valle del Cauca,Yumbo,68,F,01/04/2020
+923,S,En estudio,Cauca,Santander de Quilichao,19,F,01/04/2020
+924,S,En estudio,Valle del Cauca,Cali,16,F,01/04/2020
+925,S,En estudio,San Andrés,San Andrés,31,M,01/04/2020
+926,S,Relacionado,Cundinamarca,Cota,26,F,01/04/2020
+927,S,Relacionado,Cundinamarca,Soacha,15,M,01/04/2020
+928,S,Relacionado,Cundinamarca,Funza,43,F,01/04/2020
+929,S,En estudio,Cundinamarca,Zipaquirá,39,M,01/04/2020
+930,I,Importado,Valle del Cauca,Cali,35,M,01/04/2020
+931,S,En estudio,Valle del Cauca,Cali,57,M,01/04/2020
+932,S,En estudio,Valle del Cauca,Cali,47,F,01/04/2020
+933,S,En estudio,Valle del Cauca,Cali,23,F,01/04/2020
+934,S,En estudio,Valle del Cauca,Tulúa,47,F,01/04/2020
+935,S,Relacionado,Valle del Cauca,Yumbo,31,F,01/04/2020
+936,S,Relacionado,Valle del Cauca,Yumbo,4,M,01/04/2020
+937,I,Importado,Valle del Cauca,CALI,50,M,01/04/2020
+938,I,Importado,Valle del Cauca,Cali,21,F,01/04/2020
+939,S,Relacionado,Valle del Cauca,Cali,42,F,01/04/2020
+940,I,Importado,Valle del Cauca,Cali,61,F,01/04/2020
+941,S,Relacionado,Huila,Neiva,26,F,01/04/2020
+942,S,Relacionado,Huila,Neiva,45,M,01/04/2020
+943,S,Relacionado,Huila,Neiva,39,F,01/04/2020
+944,S,Relacionado,Huila,Neiva,50,F,01/04/2020
+945,S,En estudio,Huila,Neiva,47,M,01/04/2020
+946,S,En estudio,Huila,Neiva,59,M,01/04/2020
+947,S,En estudio,Santa Marta D.T. y C.,Santa Marta,43,F,01/04/2020
+948,S,En estudio,Santa Marta D.T. y C.,Santa Marta,41,M,01/04/2020
+949,I,Importado,Meta,Villavicencio,31,M,01/04/2020
+950,S,En estudio,Casanare,Yopal,26,M,01/04/2020
+951,S,Relacionado,Cesar,Valledupar,36,M,01/04/2020
+952,S,Relacionado,Cesar,Valledupar,70,M,01/04/2020
+953,S,Relacionado,Cesar,Valledupar,33,M,01/04/2020
+954,S,Relacionado,Cesar,Valledupar,33,M,01/04/2020
+955,S,Relacionado,Cesar,Valledupar,27,M,01/04/2020
+956,I,Importado,Valle del Cauca,Cali,64,F,01/04/2020
+957,S,Relacionado,Valle del Cauca,cali,46,F,01/04/2020
+958,S,Relacionado,Valle del Cauca,Yumbo,19,F,01/04/2020
+959,S,En estudio,Valle del Cauca,Cali,39,F,01/04/2020
+960,S,Relacionado,Valle del Cauca,Palmira,12,M,01/04/2020
+961,S,En estudio,Valle del Cauca,Cali,64,M,01/04/2020
+962,I,Importado,Valle del Cauca,Cali,68,F,01/04/2020
+963,S,En estudio,Valle del Cauca,Cali,36,M,01/04/2020
+964,S,Relacionado,Valle del Cauca,Cali,45,M,01/04/2020
+965,I,Importado,Valle del Cauca,Cali,32,M,01/04/2020
+966,I,Importado,Valle del Cauca,Cali,51,M,01/04/2020
+967,I,Importado,Valle del Cauca,Cali,44,F,01/04/2020
+968,I,Importado,Valle del Cauca,Cali,46,M,01/04/2020
+969,S,Relacionado,Valle del Cauca,Cali,39,F,01/04/2020
+970,I,Importado,Valle del Cauca,Cali,35,F,01/04/2020
+971,S,Relacionado,Cauca,Popayán,33,M,01/04/2020
+972,S,Relacionado,Cauca,Popayán,32,F,01/04/2020
+973,S,Relacionado,Quindío,Armenia,37,M,01/04/2020
+974,S,Relacionado,Quindío,Armenia,58,F,01/04/2020
+975,I,Importado,Quindío,Filandia,22,M,01/04/2020
+976,I,Importado,Tolima,Ibagué,55,F,01/04/2020
+977,I,Importado,Tolima,Ibagué,63,F,01/04/2020
+978,I,Importado,Tolima,Ibagué,26,F,01/04/2020
+979,S,Relacionado,Tolima,Ibagué,31,M,01/04/2020
+980,I,Importado,Barranquilla D.E.,Barranquilla,57,M,01/04/2020
+981,I,Importado,Quindío,Circasia,40,M,01/04/2020
+982,I,Importado,Quindío,Circasia,41,F,01/04/2020
+983,S,En estudio,Bogotá D.C.,Bogotá,63,M,01/04/2020
+984,S,En estudio,Bogotá D.C.,Bogotá,15,F,01/04/2020
+985,S,En estudio,Bogotá D.C.,Bogotá,39,F,01/04/2020
+986,S,En estudio,Bogotá D.C.,Bogotá,49,F,01/04/2020
+987,S,En estudio,Bogotá D.C.,Bogotá,73,M,01/04/2020
+988,S,En estudio,Bogotá D.C.,Bogotá,72,M,01/04/2020
+989,S,En estudio,Bogotá D.C.,Bogotá,35,M,01/04/2020
+990,S,En estudio,Bogotá D.C.,Bogotá,50,M,01/04/2020
+991,S,En estudio,Bogotá D.C.,Bogotá,51,F,01/04/2020
+992,S,En estudio,Bogotá D.C.,Bogotá,54,M,01/04/2020
+993,S,En estudio,Bogotá D.C.,Bogotá,31,F,01/04/2020
+994,S,En estudio,Bogotá D.C.,Bogotá,32,M,01/04/2020
+995,S,En estudio,Bogotá D.C.,Bogotá,23,F,01/04/2020
+996,S,En estudio,Bogotá D.C.,Bogotá,30,F,01/04/2020
+997,S,En estudio,Bogotá D.C.,Bogotá,44,F,01/04/2020
+998,S,En estudio,Bogotá D.C.,Bogotá,17,F,01/04/2020
+999,S,En estudio,Bogotá D.C.,Bogotá,39,F,01/04/2020
+1000,S,En estudio,Bogotá D.C.,Bogotá,30,F,01/04/2020
+1001,S,En estudio,Bogotá D.C.,Bogotá,56,M,01/04/2020
+1002,S,En estudio,Bogotá D.C.,Bogotá,24,M,01/04/2020
+1003,S,En estudio,Bogotá D.C.,Bogotá,54,M,01/04/2020
+1004,S,En estudio,Bogotá D.C.,Bogotá,29,M,01/04/2020
+1005,S,En estudio,Bogotá D.C.,Bogotá,26,F,01/04/2020
+1006,S,En estudio,Bogotá D.C.,Bogotá,32,F,01/04/2020
+1007,S,En estudio,Bogotá D.C.,Bogotá,66,F,01/04/2020
+1008,S,En estudio,Bogotá D.C.,Bogotá,54,F,01/04/2020
+1009,S,En estudio,Bogotá D.C.,Bogotá,56,F,01/04/2020
+1010,S,En estudio,Bogotá D.C.,Bogotá,42,F,01/04/2020
+1011,S,En estudio,Bogotá D.C.,Bogotá,23,M,01/04/2020
+1012,S,En estudio,Bogotá D.C.,Bogotá,24,M,01/04/2020
+1013,S,En estudio,Bogotá D.C.,Bogotá,12,M,01/04/2020
+1014,S,En estudio,Bogotá D.C.,Bogotá,64,F,01/04/2020
+1015,S,Relacionado,Bogotá D.C.,Bogotá,29,F,01/04/2020
+1016,S,Relacionado,Bogotá D.C.,Bogotá,32,M,01/04/2020
+1017,S,En estudio,Bogotá D.C.,Bogotá,21,F,01/04/2020
+1018,S,Relacionado,Bogotá D.C.,Bogotá,22,F,01/04/2020
+1019,S,En estudio,Bogotá D.C.,Bogotá,58,F,01/04/2020
+1020,S,En estudio,Bogotá D.C.,Bogotá,53,F,01/04/2020
+1021,S,Relacionado,Bogotá D.C.,Bogotá,56,F,01/04/2020
+1022,S,Relacionado,Bogotá D.C.,Bogotá,56,M,01/04/2020
+1023,S,Relacionado,Bogotá D.C.,Bogotá,41,M,01/04/2020
+1024,S,Relacionado,Bogotá D.C.,Bogotá,31,F,01/04/2020
+1025,S,Relacionado,Bogotá D.C.,Bogotá,31,M,01/04/2020
+1026,S,En estudio,Bogotá D.C.,Bogotá,40,F,01/04/2020
+1027,S,Relacionado,Bogotá D.C.,Bogotá,27,F,01/04/2020
+1028,S,Relacionado,Bogotá D.C.,Bogotá,39,F,01/04/2020
+1029,S,Relacionado,Bogotá D.C.,Bogotá,26,M,01/04/2020
+1030,I,Importado,Bogotá D.C.,Bogotá,39,M,01/04/2020
+1031,S,En estudio,Bogotá D.C.,Bogotá,59,F,01/04/2020
+1032,S,En estudio,Bogotá D.C.,Bogotá,71,F,01/04/2020
+1033,S,En estudio,Bogotá D.C.,Bogotá,44,F,01/04/2020
+1034,S,Relacionado,Bogotá D.C.,Bogotá,24,F,01/04/2020
+1035,S,En estudio,Bogotá D.C.,Bogotá,2,F,01/04/2020
+1036,S,En estudio,Bogotá D.C.,Bogotá,20,M,01/04/2020
+1037,I,Importado,Bogotá D.C.,Bogotá,31,M,01/04/2020
+1038,I,Importado,Bogotá D.C.,Bogotá,40,M,01/04/2020
+1039,I,Importado,Bogotá D.C.,Bogotá,34,F,01/04/2020
+1040,I,Importado,Bogotá D.C.,Bogotá,70,M,01/04/2020
+1041,S,Relacionado,Bogotá D.C.,Bogotá,74,F,01/04/2020
+1042,I,Importado,Bogotá D.C.,Bogotá,30,M,01/04/2020
+1043,S,En estudio,Bogotá D.C.,Bogotá,23,M,01/04/2020
+1044,S,Relacionado,Bogotá D.C.,Bogotá,31,F,01/04/2020
+1045,S,En estudio,Bogotá D.C.,Bogotá,26,F,01/04/2020
+1046,S,Relacionado,Bogotá D.C.,Bogotá,38,M,01/04/2020
+1047,I,Importado,Bogotá D.C.,Bogotá,49,M,01/04/2020
+1048,I,Importado,Bogotá D.C.,Bogotá,36,F,01/04/2020
+1049,S,En estudio,Bogotá D.C.,Bogotá,27,F,01/04/2020
+1050,I,Importado,Bogotá D.C.,Bogotá,26,M,01/04/2020
+1051,S,Relacionado,Bogotá D.C.,Bogotá,75,M,01/04/2020
+1052,S,Relacionado,Bogotá D.C.,Bogotá,79,F,01/04/2020
+1053,S,Relacionado,Bogotá D.C.,Bogotá,33,F,01/04/2020
+1054,I,Importado,Bogotá D.C.,Bogotá,38,F,01/04/2020
+1055,I,Importado,Bogotá D.C.,Bogotá,61,F,01/04/2020
+1056,I,Importado,Bogotá D.C.,Bogotá,25,F,01/04/2020
+1057,S,En estudio,Bogotá D.C.,Bogotá,38,F,01/04/2020
+1058,S,Relacionado,Bogotá D.C.,Bogotá,39,F,01/04/2020
+1059,S,Relacionado,Bogotá D.C.,Bogotá,45,F,01/04/2020
+1060,S,Relacionado,Bogotá D.C.,Bogotá,47,M,01/04/2020
+1061,S,En estudio,Bogotá D.C.,Bogotá,47,F,01/04/2020
+1062,S,En estudio,Bogotá D.C.,Bogotá,60,F,01/04/2020
+1063,S,Relacionado,Bogotá D.C.,Bogotá,33,F,01/04/2020
+1064,S,En estudio,Bogotá D.C.,Bogotá,33,M,01/04/2020
+1065,I,Importado,Antioquia,Santa Rosa de Osos,32,F,01/04/2020
+1066,I,Importado,Antioquia,Rionegro,40,F,02/04/2020
+1067,I,Importado,Antioquia,Envigado,51,F,02/04/2020
+1068,S,Relacionado,Antioquia,Medellín,43,M,02/04/2020
+1069,I,Importado,Antioquia,Medellín,63,F,02/04/2020
+1070,I,Importado,Antioquia,Medellín,52,F,02/04/2020
+1071,S,En estudio,Antioquia,Medellín,41,F,02/04/2020
+1072,I,Importado,Antioquia,Medellín,51,M,02/04/2020
+1073,I,Importado,Antioquia,Medellín,37,F,02/04/2020
+1074,I,Importado,Antioquia,Rionegro,39,F,02/04/2020
+1075,I,Importado,Antioquia,Itagüí,68,M,02/04/2020
+1076,S,Relacionado,Antioquia,Medellín,30,F,02/04/2020
+1077,I,Importado,Antioquia,Medellín,38,F,02/04/2020
+1078,S,En estudio,Bogotá D.C.,Bogotá,33,M,02/04/2020
+1079,I,Importado,Caldas,Anserma,40,F,02/04/2020
+1080,S,En estudio,Valle del Cauca,Cali,57,F,02/04/2020
+1081,S,En estudio,Valle del Cauca,Cali,50,M,02/04/2020
+1082,I,Importado,Valle del Cauca,Palmira,44,F,02/04/2020
+1083,I,Importado,Norte de Santander,Cúcuta,46,M,02/04/2020
+1084,I,Importado,Norte de Santander,Cúcuta,42,M,02/04/2020
+1085,S,En estudio,Antioquia,Medellín,70,F,02/04/2020
+1086,S,En estudio,Antioquia,Medellín,30,F,02/04/2020
+1087,I,Importado,Antioquia,Medellín,26,M,02/04/2020
+1088,S,En estudio,Antioquia,Medellín,30,F,02/04/2020
+1089,I,Importado,Antioquia,Don Matías,50,M,02/04/2020
+1090,S,En estudio,Antioquia,Medellín,78,M,02/04/2020
+1091,I,Importado,Antioquia,Bello,37,M,02/04/2020
+1092,S,Relacionado,Antioquia,Medellín,22,F,02/04/2020
+1093,I,Importado,Bogotá D.C.,Bogotá,55,M,02/04/2020
+1094,S,En estudio,Bogotá D.C.,Bogotá,41,F,02/04/2020
+1095,S,En estudio,Bogotá D.C.,Bogotá,60,M,02/04/2020
+1096,S,Relacionado,Bogotá D.C.,Bogotá,59,M,02/04/2020
+1097,I,Importado,Bogotá D.C.,Bogotá,60,F,02/04/2020
+1098,S,En estudio,Bogotá D.C.,Bogotá,23,M,02/04/2020
+1099,I,Importado,Bogotá D.C.,Bogotá,35,M,02/04/2020
+1100,I,Importado,Bogotá D.C.,Bogotá,59,F,02/04/2020
+1101,S,En estudio,Bogotá D.C.,Bogotá,36,M,02/04/2020
+1102,S,En estudio,Bogotá D.C.,Bogotá,66,F,02/04/2020
+1103,I,Importado,Bogotá D.C.,Bogotá,39,M,02/04/2020
+1104,I,Importado,Bogotá D.C.,Bogotá,62,M,02/04/2020
+1105,S,En estudio,Bogotá D.C.,Bogotá,30,F,02/04/2020
+1106,I,Importado,Bogotá D.C.,Bogotá,71,M,02/04/2020
+1107,I,Importado,Bogotá D.C.,Bogotá,66,F,02/04/2020
+1108,S,En estudio,Bogotá D.C.,Bogotá,60,F,02/04/2020
+1109,I,Importado,Bogotá D.C.,Bogotá,57,M,02/04/2020
