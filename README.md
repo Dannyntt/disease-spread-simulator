@@ -151,7 +151,7 @@ Datos del **Instituto Nacional de Salud (INS) de Colombia**, disponibles públic
 - Brandes, U. (2001). A faster algorithm for betweenness centrality.
 - Barabási & Albert (1999). Emergence of scaling in random networks.
 - Watts & Strogatz (1998). Collective dynamics of small-world networks.
-- se utilizo un poco de ayudas de IA para mejorar la optimizacion del codigo
+- se utilizo un poco de ayuda de IA para mejorar la optimizacion del codigo
 
 ---
 
