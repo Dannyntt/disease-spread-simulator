@@ -1,0 +1,26 @@
+# Compilados
+build/
+*.o
+*.out
+*.exe
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Resultados generados
+resultados/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
