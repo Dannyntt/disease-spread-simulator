@@ -16,8 +16,8 @@ Este proyecto simula cómo se propagó el COVID-19 en Colombia modelando los cas
 | Integrante | Responsabilidad |
 |---|---|
 | Maria Camila Rodriguez Gonzalez| Estructura del grafo + BFS/DFS + Dijkstra |
-| Daniela Giraldo Salas | Modelo SIR + estrategias de contención + estructura general del github|
-| Karen Melissa Zuluaga Quintero| Redes sintéticas + centralidades + análisis + codigos base |
+| Daniela Giraldo Salas | Estrategias de contención + estructura general del github|
+| Melissa Zuluaga Quintero| Modelo SIR + Implementación de búsqueda en arboles + análisis + codigos base |
 
 ---
 
