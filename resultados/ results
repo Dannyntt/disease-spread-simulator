@@ -13,28 +13,28 @@ OUT = sys.argv[1] if len(sys.argv) > 1 else "./resultados"
 
 
 COLORES = {
-    "S": "#2563eb",          # azul
-    "I": "#dc2626",          # rojo
-    "R": "#16a34a",          # verde
+    "S": "#2563eb",          
+    "I": "#dc2626",          
+    "R": "#16a34a",          
 
-    "bg": "#f8fafc",         # fondo general claro
-    "panel": "#ffffff",      # fondo de panel
-    "texto": "#111827",      # texto principal
+    "bg": "#f8fafc",         
+    "panel": "#ffffff",      
+    "texto": "#111827",      
     "texto_suave": "#475569",
     "grid": "#dbe3ef",
     "borde": "#cbd5e1",
 
-    "acento": "#4f46e5",     # índigo
-    "acento2": "#0891b2",    # cyan
+    "acento": "#4f46e5",     
+    "acento2": "#0891b2",    # 
     "warning": "#f59e0b",
     "gris": "#64748b",
 }
 
 ESTRATEGIAS = {
-    "ninguna":     ("Sin intervención",    "#dc2626"),
-    "hubs":        ("Aislamiento de hubs", "#f59e0b"),
-    "rastreo_bfs": ("Rastreo BFS",         "#2563eb"),
-    "vacunacion":  ("Vacunación dirigida", "#16a34a"),
+    "ninguna":     ("No intervetion",    "#dc2626"),
+    "hubs":        ("Hub isolation", "#f59e0b"),
+    "rastreo_bfs": ("BFS tracing",         "#2563eb"),
+    "vacunacion":  ("Vaccination", "#16a34a"),
 }
 
 plt.rcParams.update({
@@ -136,7 +136,7 @@ print(f"  OK — {len(historias)} estrategias | {n_nodos} nodos | {n_aristas} ar
 def fig1_curvas_sir():
     fig, axes = plt.subplots(2, 2, figsize=(15, 9))
     fig.suptitle(
-        "Dinámica SIR bajo estrategias de contención\nRed de contagio COVID-19 Colombia",
+        "SIR Dynamics under Containment Strategies\nCOVID-19 Contagion Network in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -151,9 +151,9 @@ def fig1_curvas_sir():
         df = historias[clave]
         limpiar_ejes(ax)
 
-        ax.plot(df["tick"], df["S"], color=COLORES["S"], label="Susceptibles")
-        ax.plot(df["tick"], df["I"], color=COLORES["I"], label="Infectados")
-        ax.plot(df["tick"], df["R"], color=COLORES["R"], label="Recuperados")
+        ax.plot(df["tick"], df["S"], color=COLORES["S"], label="Susceptible")
+        ax.plot(df["tick"], df["I"], color=COLORES["I"], label="Infected")
+        ax.plot(df["tick"], df["R"], color=COLORES["R"], label="Recovered")
 
         idx_pico = df["I"].idxmax()
         pico_t = int(df.loc[idx_pico, "tick"])
@@ -178,7 +178,7 @@ def fig1_curvas_sir():
         )
 
         ax.annotate(
-            f"Pico: día {pico_t}\n{pico_v} infectados",
+            f"Peak: day {pico_t}\n{pico_v} infected nodes",
             xy=(pico_t, pico_v),
             xytext=(pico_t + 4, max(pico_v * 0.78, 5)),
             fontsize=8,
@@ -197,8 +197,8 @@ def fig1_curvas_sir():
         )
 
         ax.set_title(titulo, color=color_estrategia, fontsize=12)
-        ax.set_xlabel("Días desde inicio del brote")
-        ax.set_ylabel("Cantidad de nodos")
+        ax.set_xlabel("Days since outbreak start")
+        ax.set_ylabel("Number of nodes") 
         ax.legend(fontsize=8, loc="best")
 
     plt.tight_layout()
@@ -208,7 +208,7 @@ def fig1_curvas_sir():
 def fig2_comparacion():
     fig, axes = plt.subplots(1, 3, figsize=(17, 6))
     fig.suptitle(
-        "Comparación de estrategias de contención",
+        "Comparison of Containment Strategies\nCOVID-19 Contagion Network in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -262,12 +262,12 @@ def fig2_comparacion():
                 color="#ffffff",
             )
 
-    ax.set_title("Pico máximo de infectados", color=COLORES["texto"])
-    ax.set_ylabel("Nodos infectados")
+    ax.set_title("Peak of Infected Nodes", color=COLORES["texto"])
+    ax.set_ylabel("Infected Nodes")
     ax.tick_params(axis="x", rotation=18)
     ax.grid(True, axis="y")
 
-    # Curvas de infectados
+    # Curves of infected nodes
     ax = axes[1]
     limpiar_ejes(ax)
 
@@ -285,12 +285,12 @@ def fig2_comparacion():
             ls="--" if clave == "ninguna" else "-",
         )
 
-    ax.set_title("Evolución de infectados", color=COLORES["texto"])
-    ax.set_xlabel("Días")
-    ax.set_ylabel("Infectados")
+    ax.set_title("Evolution of Infected Nodes", color=COLORES["texto"])
+    ax.set_xlabel("Days")
+    ax.set_ylabel("Infected Nodes")
     ax.legend(fontsize=8)
 
-    # Total recuperados / afectados
+    # Total recovered / affected
     ax = axes[2]
     limpiar_ejes(ax)
 
@@ -316,8 +316,8 @@ def fig2_comparacion():
             color=COLORES["texto"],
         )
 
-    ax.set_title("Total acumulado al final de la simulación", color=COLORES["texto"])
-    ax.set_ylabel("Nodos en estado R")
+    ax.set_title("Total Recovered / Affected", color=COLORES["texto"])
+    ax.set_ylabel("Nodes in R State")
     ax.tick_params(axis="x", rotation=18)
     ax.grid(True, axis="y")
 
@@ -364,7 +364,7 @@ def fig3_grafo():
 
     fig, axes = plt.subplots(1, 2, figsize=(16, 7))
     fig.suptitle(
-        "Estructura de la red de contagio",
+        "Structure of the Contagion Network\nCOVID-19 in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -372,8 +372,8 @@ def fig3_grafo():
     )
 
     graficos = [
-        (G_giant, f"Componente gigante\n{G_giant.number_of_nodes()} nodos"),
-        (G, f"Grafo completo\n{G.number_of_nodes()} nodos, {G.number_of_edges()} aristas"),
+        (G_giant, f"\n{G_giant.number_of_nodes()} nodes"),
+        (G, f"Complete Graph\n{G.number_of_nodes()} nodes, {G.number_of_edges()} edges"),
     ]
 
     for ax, (G_plot, titulo) in zip(axes, graficos):
@@ -435,9 +435,9 @@ def fig3_grafo():
         ax.axis("off")
 
     leyenda = [
-        mpatches.Patch(color=COLORES["I"], label="Infectado / importado"),
-        mpatches.Patch(color=COLORES["S"], label="Susceptible"),
-        mpatches.Patch(color=COLORES["R"], label="Recuperado"),
+       mpatches.Patch(color=COLORES["I"], label="Infected / imported"),
+       mpatches.Patch(color=COLORES["S"], label="Susceptible"),
+       mpatches.Patch(color=COLORES["R"], label="Recovered"),
     ]
 
     fig.legend(
@@ -460,7 +460,7 @@ def fig4_analisis_red():
 
     fig, axes = plt.subplots(2, 2, figsize=(15, 10))
     fig.suptitle(
-        "Métricas estructurales de la red de contagio",
+        "Structural Metrics of the Contagion Network\nCOVID-19 in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -598,7 +598,7 @@ def fig5_departamentos():
 
     fig, axes = plt.subplots(1, 3, figsize=(17, 6))
     fig.suptitle(
-        "Distribución territorial de casos y conectividad",
+        "Territorial Distribution of Cases and Connectivity\nCOVID-19 Contagion Network in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -719,7 +719,7 @@ def fig6_resumen():
     gs = gridspec.GridSpec(2, 3, hspace=0.5, wspace=0.4, figure=fig)
 
     fig.suptitle(
-        "Resumen comparativo del simulador epidemiológico SIR",
+        "Comparative Summary of the SIR Epidemiological Simulator\nCOVID-19 Contagion Network in Colombia",
         fontsize=15,
         fontweight="bold",
         color=COLORES["texto"],
@@ -748,8 +748,8 @@ def fig6_resumen():
 
         ax.set_yticks([0, 1, 2])
         ax.set_yticklabels(["S", "I", "R"])
-        ax.set_xlabel("Días")
-        ax.set_title("Evolución SIR sin intervención")
+        ax.set_xlabel("DDays")
+        ax.set_title("SIR Evolution without Intervention", color=COLORES["texto"])
 
         cbar = plt.colorbar(im, ax=ax, shrink=0.82)
         cbar.set_label("Nodos")
@@ -780,7 +780,7 @@ def fig6_resumen():
 
     tabla = ax.table(
         cellText=tabla_d,
-        colLabels=["Estrategia", "Pico I", "Día", "Reducción"],
+        colLabels=["Strategy", "I Peak", "DDay", "Reduction"],
         cellLoc="center",
         loc="center",
     )
@@ -822,9 +822,9 @@ def fig6_resumen():
                 label=label,
             )
 
-    ax.set_title("Comparación final de infectados por estrategia")
-    ax.set_xlabel("Días desde inicio del brote")
-    ax.set_ylabel("Nodos infectados")
+    ax.set_title("Comparative Final of Infected Nodes by Strategy", color=COLORES["texto"])
+    ax.set_xlabel("DDays since the start of the outbreak")
+    ax.set_ylabel("Infected Nodes")
     ax.legend(fontsize=9)
 
     guardar(fig, "fig6_resumen.png")
