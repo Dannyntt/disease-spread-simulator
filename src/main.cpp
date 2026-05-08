@@ -6,7 +6,7 @@
 #include <map>
 #include <algorithm>
 #include <chrono>
-#include <filesystem>   // C++17 — reemplaza std::system para mkdir
+#include <filesystem>
 
 #include "graph.h"
 #include "model.h"
@@ -19,9 +19,6 @@ namespace CargaDatos {
     ParametrosSIR  calibrarParametros (const std::string& pathNacional);
 }
 
-// ─────────────────────────────────────────────────────────────
-//  Utilidades de consola
-// ─────────────────────────────────────────────────────────────
 void imprimirSeparador(char c = '=', int n = 60) {
     std::cout << std::string(n, c) << "\n";
 }
@@ -34,8 +31,8 @@ void imprimirMetricas(const Grafo& G, const std::string& nombre) {
     auto grados = G.grados();
     int maxGrado = 0, minGrado = INT_MAX, totalGrado = 0;
     for (auto& [_, d] : grados) {
-        maxGrado  = std::max(maxGrado, d);
-        minGrado  = std::min(minGrado, d);
+        maxGrado   = std::max(maxGrado, d);
+        minGrado   = std::min(minGrado, d);
         totalGrado += d;
     }
     double promGrado = G.numNodos() > 0
@@ -61,7 +58,6 @@ void imprimirMetricas(const Grafo& G, const std::string& nombre) {
     std::cout << "  Componentes   : " << comps.size()   << "\n";
     std::cout << "  Comp. gigante : " << maxComp << " nodos\n";
 
-    // Top 5 por centralidad de grado
     auto degCent = G.centralidadGrado();
     auto top5 = G.topKNodos(5, [&](int id) {
         return degCent.count(id) ? degCent.at(id) : 0.0;
@@ -70,7 +66,6 @@ void imprimirMetricas(const Grafo& G, const std::string& nombre) {
     for (int id : top5) std::cout << id << " ";
     std::cout << "\n";
 
-    // Top 5 por betweenness centrality
     auto bc = G.betweennessCentrality();
     auto top5bc = G.topKNodos(5, [&](int id) {
         return bc.count(id) ? bc.at(id) : 0.0;
@@ -86,9 +81,6 @@ void imprimirMetricas(const Grafo& G, const std::string& nombre) {
     std::cout << "\n";
 }
 
-// ─────────────────────────────────────────────────────────────
-//  Guardar historia SIR a CSV
-// ─────────────────────────────────────────────────────────────
 void guardarHistoria(const std::vector<PuntoSIR>& historia,
                      const std::string& estrategia,
                      const std::string& outDir) {
@@ -99,9 +91,6 @@ void guardarHistoria(const std::vector<PuntoSIR>& historia,
         f << p.tick << "," << p.S << "," << p.I << "," << p.R << "\n";
 }
 
-// ─────────────────────────────────────────────────────────────
-//  Resumen comparativo de estrategias
-// ─────────────────────────────────────────────────────────────
 void imprimirResumen(const std::map<std::string,
                      std::vector<PuntoSIR>>& resultados) {
     imprimirSeparador();
@@ -148,7 +137,6 @@ int main(int argc, char* argv[]) {
     std::string dataDir = (argc > 1) ? argv[1] : "./data";
     std::string outDir  = (argc > 2) ? argv[2] : "./resultados";
 
-    // C++17: reemplaza std::system("mkdir -p ...") — portable en todos los SO
     std::filesystem::create_directories(outDir);
 
     imprimirSeparador();
@@ -163,7 +151,6 @@ int main(int argc, char* argv[]) {
     std::cout << "[1/5] Cargando datos...\n";
     Grafo G = CargaDatos::cargarGrafoMicro(dataDir + "/Casos1.csv");
 
-    // CORRECCIÓN: el archivo se llama covid-19-colombia-all.csv
     auto params = CargaDatos::calibrarParametros(
         dataDir + "/covid-19-colombia-all.csv");
 
@@ -186,27 +173,40 @@ int main(int argc, char* argv[]) {
     // ── 3. Dijkstra: cadena de contagio más probable ──────────
     std::cout << "[3/5] Cadena de contagio mas probable (Dijkstra)...\n";
     {
-        // Tomar el primer infectado y el nodo más lejano alcanzable como ejemplo
-        auto nodos = G.todosLosNodos();
-        int origen = -1, destino = -1;
+        // Buscar dos nodos en la misma componente conexa
+        int origenD = -1, destinoD = -1;
 
-        for (int id : nodos)
-            if (G.getNodo(id).estado == EstadoSIR::I) { origen = id; break; }
+        auto comps = G.componentesConexas();
+        std::vector<int>* mayor = nullptr;
+        for (auto& c : comps)
+            if (!mayor || c.size() > mayor->size())
+                mayor = &c;
 
-        if (origen != -1) {
-            auto distancias = Dijkstra::distanciasDesde(G, origen);
-            int maxDist = 0;
-            for (auto& [id, d] : distancias)
-                if (d > maxDist) { maxDist = d; destino = id; }
+        if (mayor && mayor->size() >= 2) {
+            origenD  = (*mayor)[0];
+            destinoD = (*mayor)[mayor->size() - 1];
+            std::cout << "  Usando origen=" << origenD
+                      << " destino=" << destinoD << "\n";
+        }
 
-            std::cout << "  Origen: " << origen
-                      << " -> Destino: " << destino
-                      << " (distancia=" << maxDist << " saltos)\n";
+        if (origenD != -1 && destinoD != -1) {
+            auto res = Dijkstra::caminoMasProbable(G, origenD, destinoD);
 
-            auto res = Dijkstra::caminoMasProbable(G, origen, destino);
+            if (res.encontrado) {
+                std::cout << "  Camino encontrado ("
+                          << res.camino.size()
+                          << " nodos, costo=" << res.costo << "):\n  ";
+                for (int id : res.camino)
+                    std::cout << id << " -> ";
+                std::cout << "FIN\n";
+            } else {
+                std::cout << "  Sin camino entre "
+                          << origenD << " y " << destinoD << "\n";
+            }
+
             Dijkstra::exportarCamino(res, G, outDir + "/cadena_contagio.csv");
         } else {
-            std::cout << "  No hay nodos infectados en el grafo inicial.\n";
+            std::cout << "  No hay componentes con 2+ nodos.\n";
         }
     }
     std::cout << "\n";
@@ -222,10 +222,10 @@ int main(int argc, char* argv[]) {
     };
 
     std::vector<EstrategiaFn> estrategias = {
-        {"ninguna",      [](const Grafo& g){ return Estrategias::ninguna(g); }},
-        {"hubs",         [](const Grafo& g){ return Estrategias::aislarHubs(g, 0.05); }},
-        {"rastreo_bfs",  [](const Grafo& g){ return Estrategias::rastrearContactosBFS(g); }},
-        {"vacunacion",   [](const Grafo& g){ return Estrategias::vacunacionDirigida(g, 0.10); }},
+        {"ninguna",     [](const Grafo& g){ return Estrategias::ninguna(g); }},
+        {"hubs",        [](const Grafo& g){ return Estrategias::aislarHubs(g, 0.05); }},
+        {"rastreo_bfs", [](const Grafo& g){ return Estrategias::rastrearContactosBFS(g); }},
+        {"vacunacion",  [](const Grafo& g){ return Estrategias::vacunacionDirigida(g, 0.10); }},
     };
 
     std::map<std::string, std::vector<PuntoSIR>> resultados;
@@ -241,21 +241,20 @@ int main(int argc, char* argv[]) {
     // ── 5. Comparación con redes sintéticas ───────────────────
     std::cout << "\n[5/5] Comparando con redes sinteticas...\n";
     {
-        int n = std::min(G.numNodos(), 500); // usar tamaño similar al real
+        int n = std::min(G.numNodos(), 500);
         int infectados_ini = std::max(1, n / 20);
 
         struct RedSint { std::string nombre; Grafo g; };
         std::vector<RedSint> redes = {
-            {"Aleatoria (ER)",    NetworkGen::erdosRenyi(n, 0.02)},
-            {"Small-World (WS)",  NetworkGen::wattsStrogatz(n, 4, 0.1)},
-            {"Scale-Free (BA)",   NetworkGen::barabasiAlbert(n, 2)},
+            {"Aleatoria (ER)",   NetworkGen::erdosRenyi(n, 0.02)},
+            {"Small-World (WS)", NetworkGen::wattsStrogatz(n, 4, 0.1)},
+            {"Scale-Free (BA)",  NetworkGen::barabasiAlbert(n, 2)},
         };
 
         std::cout << "\n  Estadisticas de redes sinteticas:\n";
         for (auto& r : redes) {
             NetworkGen::infectarAleatorio(r.g, infectados_ini);
             NetworkGen::imprimirStats(r.g, r.nombre);
-
             auto historia = sim.simular(r.g, PASOS);
             guardarHistoria(historia, r.nombre, outDir);
             resultados["sint_" + r.nombre] = historia;

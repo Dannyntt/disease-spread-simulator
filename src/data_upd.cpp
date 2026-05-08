@@ -1,5 +1,5 @@
-#include “data_upd.h”
-#include “graph.h”          // <– necesario para Grafo, Nodo, EstadoSIR
+#include "data_upd.h"
+#include "graph.h"          // <– necesario para Grafo, Nodo, EstadoSIR
 #include <vector>           // <– necesario para std::vector
 #include <fstream>
 #include <sstream>
@@ -17,7 +17,6 @@ std::vector<std::string> campos;
 std::string campo;
 bool enComillas = false;
 
-```
 for (char c : linea) {
     if (c == '"') {
         enComillas = !enComillas;
@@ -35,7 +34,7 @@ for (char c : linea) {
 }
 campos.push_back(campo);
 return campos;
-```
+
 
 }
 
@@ -49,7 +48,7 @@ int y = std::stoi(fecha.substr(6, 4));
 int diasTotales = y * 365 + m * 30 + d;
 int origen      = 2020 * 365 + 3 * 30 + 6;  // 06/03/2020
 return diasTotales - origen;
-} catch (…) {
+} catch (...) {
 return 0;
 }
 }
@@ -58,11 +57,11 @@ return 0;
 Grafo cargarGrafoMicro(const std::string& pathCasos) {
 std::ifstream f(pathCasos);
 if (!f.is_open()) {
-std::cerr << “[ERROR] No se pudo abrir: “ << pathCasos << “\n”;
-return Grafo{};
+    std::cerr << "[ERROR] No se pudo abrir: " << pathCasos << "\n";
+    return Grafo{};
 }
 
-```
+
 Grafo G;
 std::string linea;
 std::getline(f, linea); // encabezado
@@ -130,7 +129,6 @@ std::cout << "[Grafo micro] Nodos: " << G.numNodos()
           << "  Aristas: " << G.numAristas()
           << "  (ventana epidemiologica: " << VENTANA_DIAS << " dias)\n";
 return G;
-```
 
 }
 
@@ -139,7 +137,7 @@ ParametrosSIR calibrarParametros(const std::string& pathNacional) {
 double beta  = 0.25;
 double gamma = 1.0 / 14.0;
 
-```
+
 std::ifstream f(pathNacional);
 if (f.is_open()) {
     std::string linea;
@@ -167,7 +165,7 @@ std::cout << "[Parametros SIR] beta=" << beta
           << "  gamma=" << gamma
           << "  R0=" << beta / gamma << "\n";
 return {beta, gamma};
-```
+
 
 }
 

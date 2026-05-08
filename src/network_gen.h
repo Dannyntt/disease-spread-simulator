@@ -9,6 +9,7 @@
 //
 //  Topologías disponibles:
 //
+
 //  1. Red aleatoria (Erdős–Rényi G(n,p))
 //     Cada par de nodos se conecta con probabilidad p.
 //     Grado promedio ≈ p*(n-1). Sin estructura de comunidades.

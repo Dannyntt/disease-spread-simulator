@@ -266,8 +266,8 @@ void Grafo::exportarNodos(const std::string& path) const {
     f << "id,estado,tipo,depto,ciudad,edad,sexo,fecha\n";
     for (auto& [id, n] : nodos_) {
         f << id << "," << estadoStr(n.estado) << ","
-          << n.tipo << "," << n.depto << "," << n.ciudad << ","
-          << n.edad << "," << n.sexo << "," << n.fecha << "\n";
+           << n.meta.tipo << "," << n.meta.depto << "," << n.meta.ciudad << ","
+           << n.meta.edad << "," << n.meta.sexo << "," << n.meta.fecha << "\n";
     }
 }
 
@@ -295,7 +295,7 @@ void Grafo::exportarGrados(const std::string& path) const {
     for (auto& [id, aristas] : adyacencia_) {
         auto& n = nodos_.at(id);
         f << id << "," << aristas.size() << ","
-          << n.tipo << "," << n.depto << "\n";
+          << n.meta.tipo << "," << n.meta.depto << "\n";
     }
 }
 
@@ -311,7 +311,7 @@ void Grafo::exportarCentralidades(const std::string& path) const {
           << (degC.count(id) ? degC.at(id) : 0.0) << ","
           << (bc.count(id)   ? bc.at(id)   : 0.0) << ","
           << grado << ","
-          << n.tipo << "," << n.depto << "\n";
+          << n.meta.tipo << "," << n.meta.depto << "\n";
     }
 }
 

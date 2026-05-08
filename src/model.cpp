@@ -78,7 +78,7 @@ Grafo aislarHubs(const Grafo& G, double porcentaje) {
 // BFS 1-hop desde los nodos infectados.
 // Todos los vecinos encontrados quedan en cuarentena
 // (se remueven sus aristas para cortar la cadena de contagio).
-Grafo rastreaContacnosBFS(const Grafo& G) {
+Grafo rastrearContactosBFS(const Grafo& G) {
     Grafo g = G.copia();
 
     // Semillas: todos los infectados iniciales
