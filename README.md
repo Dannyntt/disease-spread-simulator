@@ -16,8 +16,8 @@ This project simulates how COVID-19 spread in Colombia by modeling real confirme
 | Member | Responsibility |
 |---|---|
 | Maria Camila Rodriguez Gonzalez | Graph structure + BFS/DFS + Dijkstra |
-| Daniela Giraldo Salas | Containment strategies + general GitHub structure |
-| Melissa Zuluaga Quintero | SIR model + tree search implementation + report + base code |
+| Daniela Giraldo Salas | Containment strategies + SIR model + general GitHub structure |
+| Melissa Zuluaga Quintero | tree search implementation + report + base code |
 
 ---
 
