@@ -1,81 +1,81 @@
-# 🦠 Simulador de Propagación de Enfermedades en Grafos
+# 🦠 Disease Spread Simulator on Graphs
 
-> Proyecto — Estructuras de Datos y Algoritmos  
-> Modelado y simulación de epidemias sobre datos reales de COVID-19 Colombia usando teoría de grafos
-
----
-
-## 📌 Descripción
-
-Este proyecto simula cómo se propagó el COVID-19 en Colombia modelando los casos reales como un **grafo de contagio**, donde cada nodo es un caso confirmado y cada arista representa un vínculo epidemiológico (mismo departamento, fechas cercanas). Se implementa el modelo **SIR** (Susceptible → Infectado → Recuperado) y se comparan cuatro estrategias de contención. Adicionalmente se compara el comportamiento en tres topologías de red sintéticas.
+> Project — Data Structures and Algorithms  
+> Modeling and simulation of epidemics using real COVID-19 Colombia data and graph theory
 
 ---
 
-## 👥 Equipo
+## 📌 Description
 
-| Integrante | Responsabilidad |
+This project simulates how COVID-19 spread in Colombia by modeling real confirmed cases as a **contagion graph**, where each node is a confirmed case and each edge represents an epidemiological link (same department, close dates). The **SIR model** (Susceptible → Infected → Recovered) is implemented and four containment strategies are compared. Additionally, behavior is compared across three synthetic network topologies.
+
+---
+
+## 👥 Team
+
+| Member | Responsibility |
 |---|---|
-| Maria Camila Rodriguez Gonzalez| Estructura del grafo + BFS/DFS + Dijkstra |
-| Daniela Giraldo Salas | Estrategias de contención + estructura general del github|
-| Melissa Zuluaga Quintero| Modelo SIR + Implementación de búsqueda en arboles + Informe + codigos base |
+| Maria Camila Rodriguez Gonzalez | Graph structure + BFS/DFS + Dijkstra |
+| Daniela Giraldo Salas | Containment strategies + general GitHub structure |
+| Melissa Zuluaga Quintero | SIR model + tree search implementation + report + base code |
 
 ---
 
-## 🎯 Objetivos
+## 🎯 Objectives
 
-- Modelar la red de contagio de COVID-19 Colombia como grafo no dirigido ponderado
-- Implementar simulación SIR paso a paso sobre la red real
-- Identificar super-contagiadores con centralidad de grado y betweenness
-- Encontrar la cadena de contagio más probable entre dos casos (Dijkstra)
-- Comparar cuatro estrategias de contención y medir su efectividad
-- Analizar cómo la topología de red afecta la velocidad de propagación
+- Model the COVID-19 Colombia contagion network as a weighted undirected graph
+- Implement step-by-step SIR simulation over the real network
+- Identify super-spreaders using degree centrality and betweenness
+- Find the most probable contagion chain between two cases (Dijkstra)
+- Compare four containment strategies and measure their effectiveness
+- Analyze how network topology affects the speed of propagation
 
 ---
 
-## 🧠 Algoritmos Implementados
+## 🧠 Implemented Algorithms
 
-| Algoritmo | Archivo | Uso |
+| Algorithm | File | Use |
 |---|---|---|
-| BFS | `graph.cpp` | Rastreo de contactos, distancias |
-| DFS | `graph.cpp` | Componentes conexas |
-| Dijkstra | `dijkstra.cpp` | Cadena de contagio más probable |
-| Centralidad de grado | `graph.cpp` | Identificar hubs |
-| Betweenness centrality | `graph.cpp` | Nodos puente críticos (Brandes 2001) |
-| Modelo SIR | `model.cpp` | Simulación de propagación |
-| Erdős–Rényi | `network_gen.cpp` | Red aleatoria sintética |
-| Watts–Strogatz | `network_gen.cpp` | Red Small-World |
-| Barabási–Albert | `network_gen.cpp` | Red Scale-Free |
+| BFS | `graph.cpp` | Contact tracing, distances |
+| DFS | `graph.cpp` | Connected components |
+| Dijkstra | `dijkstra.cpp` | Most probable contagion chain |
+| Degree centrality | `graph.cpp` | Identify hubs |
+| Betweenness centrality | `graph.cpp` | Critical bridge nodes (Brandes 2001) |
+| SIR model | `model.cpp` | Spread simulation |
+| Erdős–Rényi | `network_gen.cpp` | Random synthetic network |
+| Watts–Strogatz | `network_gen.cpp` | Small-World network |
+| Barabási–Albert | `network_gen.cpp` | Scale-Free network |
 
 ---
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
 disease-spread-simulator/
 │
-├── src/                        ← código fuente
-│   ├── graph.h / graph.cpp     ← grafo + BFS/DFS/centralidades
-│   ├── model.h / model.cpp     ← simulación SIR + estrategias
+├── src/                        ← source code
+│   ├── graph.h / graph.cpp     ← graph + BFS/DFS/centralities
+│   ├── model.h / model.cpp     ← SIR simulation + strategies
 │   ├── dijkstra.h / dijkstra.cpp
 │   ├── network_gen.h / network_gen.cpp
-│   ├── data_upd.h / data_upd.cpp ← carga de datos CSV
+│   ├── data_upd.h / data_upd.cpp ← CSV data loading
 │   └── main.cpp
 │
-├── data/                       ← datasets de entrada
-│   ├── Casos1.csv              ← casos individuales COVID-19 Colombia
+├── data/                       ← input datasets
+│   ├── Casos1.csv              ← individual COVID-19 cases in Colombia
 │   ├── covid-19-colombia-all.csv
 │   ├── covid-19-colombia-deaths.csv
 │   └── colombia_departamentos.csv
 │
-├── resultados/                 ← salidas generadas automáticamente
+├── resultados/                 ← automatically generated outputs
 │   ├── grafo_nodos.csv
 │   ├── grafo_aristas.csv
 │   ├── grafo_centralidades.csv
 │   ├── grafo_componentes.csv
 │   ├── cadena_contagio.csv
-│   └── sir_*.csv               ← curvas SIR por estrategia
+│   └── sir_*.csv               ← SIR curves per strategy
 │
-├── simulador.exe               ← ejecutable precompilado (Windows)
+├── simulador.exe               ← precompiled executable (Windows)
 ├── CMakeLists.txt
 ├── .gitignore
 └── README.md
@@ -83,13 +83,13 @@ disease-spread-simulator/
 
 ---
 
-## ⚙️ Compilación y Ejecución
+## ⚙️ Build and Run
 
-### Requisitos
-- Compilador C++17 o superior (`g++` / `clang++`)
-- CMake 3.15+ *(opcional)*
+### Requirements
+- C++17 or higher compiler (`g++` / `clang++`)
+- CMake 3.15+ *(optional)*
 
-### Opción A — Compilar con CMake
+### Option A — Build with CMake
 ```bash
 mkdir build && cd build
 cmake ..
@@ -97,7 +97,7 @@ cmake --build .
 ./simulador ../data/ ../resultados/
 ```
 
-### Opción B — Compilar manual con g++
+### Option B — Manual build with g++
 ```bash
 g++ -std=c++17 -O2 -Isrc \
     src/main.cpp src/graph.cpp src/model.cpp \
@@ -107,54 +107,54 @@ g++ -std=c++17 -O2 -Isrc \
 ./simulador data/ resultados/
 ```
 
-### Opción C — Ejecutable precompilado (Windows)
+### Option C — Precompiled executable (Windows)
 ```bash
 simulador.exe data/ resultados/
 ```
 
 ---
 
-## 🚀 Salida del Programa
+## 🚀 Program Output
 
 ```
-[1/5] Cargando datos...
-[2/5] Analizando grafo real...
-[3/5] Cadena de contagio mas probable (Dijkstra)...
-[4/5] Simulando estrategias de contencion...
-[5/5] Comparando con redes sinteticas...
+[1/5] Loading data...
+[2/5] Analyzing real graph...
+[3/5] Most probable contagion chain (Dijkstra)...
+[4/5] Simulating containment strategies...
+[5/5] Comparing with synthetic networks...
 
-RESUMEN COMPARATIVO DE ESTRATEGIAS
-Estrategia              Pico I    Dia pico  Total R   Reduccion
-Sin intervencion        ...       ...       ...       0.0%
-Aislar hubs (5%)        ...       ...       ...       XX.X%
-Rastreo BFS             ...       ...       ...       XX.X%
-Vacunacion dirigida     ...       ...       ...       XX.X%
+COMPARATIVE SUMMARY OF STRATEGIES
+Strategy                Peak I    Peak day  Total R   Reduction
+No intervention         ...       ...       ...       0.0%
+Isolate hubs (5%)       ...       ...       ...       XX.X%
+BFS contact tracing     ...       ...       ...       XX.X%
+Targeted vaccination    ...       ...       ...       XX.X%
 ```
 
-Todos los resultados se guardan en `resultados/`.
+All results are saved in `resultados/`.
 
 ---
 
-## 📊 Datos Utilizados
+## 📊 Data Used
 
-Datos del **Instituto Nacional de Salud (INS) de Colombia**, disponibles públicamente.
+Data from the **Instituto Nacional de Salud (INS) de Colombia**, publicly available.
 
-- `Casos1.csv` — casos individuales con fecha, departamento, ciudad, edad, sexo
-- `covid-19-colombia-all.csv` — totales nacionales diarios para calibrar β y γ
+- `Casos1.csv` — individual cases with date, department, city, age, sex
+- `covid-19-colombia-all.csv` — national daily totals to calibrate β and γ
 
 ---
 
-## 📚 Referencias
+## 📚 References
 
 - Newman, M. (2010). *Networks: An Introduction*. Oxford University Press.
 - Kermack & McKendrick (1927). Contribution to the mathematical theory of epidemics.
 - Brandes, U. (2001). A faster algorithm for betweenness centrality.
 - Barabási & Albert (1999). Emergence of scaling in random networks.
 - Watts & Strogatz (1998). Collective dynamics of small-world networks.
-- se utilizo un poco de ayuda de IA para mejorar la optimizacion del codigo
+- AI assistance was used to help optimize parts of the code
 
 ---
 
-## 📝 Nota académica
+## 📝 Academic note
 
-Proyecto académico — Curso de Estructuras de Datos y Algoritmos. Implementado en **C++17**.
+Academic project — Data Structures and Algorithms course. Implemented in **C++17**.
