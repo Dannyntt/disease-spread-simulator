@@ -78,6 +78,7 @@ disease-spread-simulator/
 ├── simulador.exe               ← precompiled executable (Windows)
 ├── CMakeLists.txt
 ├── .gitignore
+├── SIRMODEL_REPORT.pdf
 └── README.md
 ```
 
